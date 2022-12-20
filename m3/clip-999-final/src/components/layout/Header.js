@@ -1,0 +1,28 @@
+import React from "react";
+
+const Header = ({ toggleTheme }) => {
+  return (
+    <header>
+      <h2>To-do List</h2>
+      <span className="nav-item">
+        <input
+          type="checkbox"
+          className="theme-toggle-checkbox"
+          autoComplete="off"
+          id="toggleThemeId"
+          defaultChecked={false}
+          onClick={() => {
+            toggleTheme();
+          }}
+        />
+        <label htmlFor="toggleThemeId" className="theme-toggle-checkbox-label">
+          <i className="fas fa-moon"></i>
+          <i className="fas fa-sun"></i>
+          <span className="ball"></span>
+        </label>
+      </span>
+    </header>
+  );
+};
+
+export default Header;
