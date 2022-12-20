@@ -3,7 +3,7 @@ import axios from "axios";
 
 const LOADING_STATES = ["loading", "errored", "success"];
 
-function useGeneralizedCrudMethods(url, errorNotificationFn) {
+const useGeneralizedCrudMethods = (url, errorNotificationFn) => {
   const [data, setData] = useState();
   const [error, setError] = useState();
   const [loadingStatus, setLoadingStatus] = useState("loading");
@@ -171,6 +171,6 @@ function useGeneralizedCrudMethods(url, errorNotificationFn) {
     updateRecord, // update new record at end, takes single record as parameter, second as callback function when done
     deleteRecord, // takes primary key named "id"
   };
-}
+};
 
 export default useGeneralizedCrudMethods;

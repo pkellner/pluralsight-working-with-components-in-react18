@@ -5,7 +5,7 @@ import ToDoManager from "./components/todo/ToDoManager";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 
-function App() {
+const App = () => {
   const [displayStatus, setDisplayStatus] = useState("all"); // all, pending, completed
   const [important, setImportant] = useState(false);
   const [searchText, setSearchText] = useState("");
@@ -40,6 +40,6 @@ function App() {
       </div>
     </TodosDataProvider>
   );
-}
+};
 
 export default App;

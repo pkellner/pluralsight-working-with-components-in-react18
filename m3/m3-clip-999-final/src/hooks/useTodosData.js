@@ -1,6 +1,6 @@
 import useGeneralizedCrudMethods from "./useGeneralizedCrudMethods";
 
-function useTodosData() {
+const useTodosData = () => {
   const url = "/api/todo";
   const errorNotificationFn = (error) => {
     console.log("Error From useTodosData", error);
@@ -37,6 +37,6 @@ function useTodosData() {
     deleteTodo,
     reFetch,
   };
-}
+};
 
 export default useTodosData;
