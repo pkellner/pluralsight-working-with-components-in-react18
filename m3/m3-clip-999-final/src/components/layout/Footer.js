@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ToDosDataContext } from "../contexts/ToDosDataContext";
+import { ToDosDataContext } from "../../contexts/ToDosDataContext";
 
 const Footer = () => {
   const { todoList, deleteTodo, reFetch, loadingStatus } =
