@@ -17,6 +17,14 @@ const Inner = ({
 }) => {
   
   //throw "error in ToDo.js";
+  // or change db.json file
+  // "todos": [
+  //     {
+  //       "id": 2,
+  //       "todoTextx": "Do laundry",
+  //       "completed": false,
+  //       "important": true
+  //     },
   
   return (
     <div
@@ -33,7 +41,7 @@ const Inner = ({
             <i className="fa fa-exclamation-circle"></i>
           </span>
         ) : null}
-        {todoItem.todoText}
+        {todoItem.todoText.slice(0,60)}
         
       </div>
 
