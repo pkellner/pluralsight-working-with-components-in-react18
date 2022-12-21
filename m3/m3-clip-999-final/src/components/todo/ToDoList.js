@@ -9,10 +9,9 @@ const ToDoList = ({
   handleDelete,
   handleEdit,
   idUpdating,
-  darkTheme,
 }) => {
   return (
-    <div className="tasks" data-theme={darkTheme === true ? "dark" : "light"}>
+    <div className="tasks">
       {toDoList
         .filter((todo) => {
           if (displayStatus === "all") {

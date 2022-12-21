@@ -1,15 +1,23 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
+import ErrorBoundary from "../common/ErrorBoundary";
 
-const ToDo = ({
+const ToDoErrorBoundary = props => (
+  <div className="single-task text-bg-danger">
+    ERROR PROCESSING TODO ITEM.<br/> JSON: {JSON.stringify(props)}
+  </div>
+);
+
+const Inner = ({
   todoItem,
   handleToggleCompleted,
   handleDelete,
   handleEdit,
   idUpdating,
 }) => {
-  const { darkTheme } = useContext(ThemeContext);
-
+  
+  //throw "error in ToDo.js";
+  
   return (
     <div
       key={todoItem.id}
@@ -26,6 +34,7 @@ const ToDo = ({
           </span>
         ) : null}
         {todoItem.todoText}
+        
       </div>
 
       {idUpdating === todoItem.id ? (
@@ -62,6 +71,14 @@ const ToDo = ({
         </button>
       </div>
     </div>
+  );
+};
+
+const ToDo = (props) => {
+  return (
+    <ErrorBoundary errorUI={<ToDoErrorBoundary {...props}></ToDoErrorBoundary>}>
+      <Inner {...props}></Inner>
+    </ErrorBoundary>
   );
 };
 

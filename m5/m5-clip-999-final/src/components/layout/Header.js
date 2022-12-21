@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
 
 const Header = () => {
-  const { toggleTheme } = useContext(ThemeContext);
+  const { darkTheme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <header>
@@ -10,6 +10,7 @@ const Header = () => {
       <span className="nav-item">
         <input
           type="checkbox"
+          checked={darkTheme === true}
           className="theme-toggle-checkbox"
           autoComplete="off"
           id="toggleThemeId"

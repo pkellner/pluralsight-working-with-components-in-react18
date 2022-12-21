@@ -18,7 +18,7 @@ const App = () => {
   return (
     <TodosDataProvider>
       <div className="container" data-theme={darkTheme ? "dark" : "light"}>
-        <Header toggleTheme={toggleTheme} />
+        <Header toggleTheme={toggleTheme} darkTheme={darkTheme} />
         <ToDoListWithToolbar
           displayStatus={displayStatus}
           setDisplayStatus={setDisplayStatus}

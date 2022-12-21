@@ -8,7 +8,6 @@ const ToDo = ({
   handleEdit,
   idUpdating,
 }) => {
-  const { darkTheme } = useContext(ThemeContext);
 
   return (
     <div
