@@ -2,23 +2,17 @@ import { useState } from "react";
 import ToDoListWithToolbar from "./components/todo/ToDoListWithToolbar";
 import { TodosDataProvider } from "./contexts/ToDosDataContext";
 import ToDoManager from "./components/todo/ToDoManager";
-import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
+import Layout from "./components/layout/Layout";
 
 const App = () => {
   const [displayStatus, setDisplayStatus] = useState("all"); // all, pending, completed
   const [important, setImportant] = useState(false);
   const [searchText, setSearchText] = useState("");
 
-  const [darkTheme, setDarkTheme] = useState(false);
-  const toggleTheme = () => {
-    setDarkTheme(!darkTheme);
-  };
-
   return (
     <TodosDataProvider>
-      <div className="container" data-theme={darkTheme ? "dark" : "light"}>
-        <Header toggleTheme={toggleTheme} />
+      <Layout>
         <ToDoListWithToolbar
           displayStatus={displayStatus}
           setDisplayStatus={setDisplayStatus}
@@ -31,11 +25,10 @@ const App = () => {
             displayStatus={displayStatus}
             important={important}
             searchText={searchText}
-            darkTheme={darkTheme}
           />
         </ToDoListWithToolbar>
         <Footer />
-      </div>
+      </Layout>
     </TodosDataProvider>
   );
 };
