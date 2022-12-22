@@ -11,8 +11,7 @@ const Header = ({ darkTheme, toggleTheme }) => {
           className="theme-toggle-checkbox"
           autoComplete="off"
           id="toggleThemeId"
-          defaultChecked={false}
-          onClick={() => {
+          onChange={() => {
             toggleTheme();
           }}
         />
