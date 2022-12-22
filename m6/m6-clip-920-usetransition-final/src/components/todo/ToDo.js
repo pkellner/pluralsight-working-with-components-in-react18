@@ -16,7 +16,7 @@ const Inner = ({
   idUpdating,
 }) => {
   
-  console.log("ToDo: rendered ",todoItem.todoText);
+  //console.log("ToDo: rendered ",todoItem.todoText);
   
   //throw "error in ToDo.js";
   // or change db.json file
