@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = ({ darkTheme, toggleTheme }) => {
+const Header = ({ darkTheme, toggleTheme, layoutVersion }) => {
   return (
     <header>
       <h2>To-do List</h2>
@@ -20,6 +20,7 @@ const Header = ({ darkTheme, toggleTheme }) => {
           <i className="fas fa-sun"></i>
           <span className="ball"></span>
         </label>
+        <span>{layoutVersion}</span>
       </span>
     </header>
   );

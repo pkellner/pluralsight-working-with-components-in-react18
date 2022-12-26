@@ -4,12 +4,7 @@ import ToDoEditForm from "./ToDoEditForm";
 import ToDoList from "./ToDoList";
 import ToDoAddForm from "./ToDoAddForm";
 
-const ToDoManager = ({
-  displayStatus,
-  important,
-  searchText,
-  darkTheme,
-}) => {
+const ToDoManager = ({ displayStatus, important, searchText, darkTheme }) => {
   const { todoList, updateTodo, createTodo, deleteTodo } =
     useContext(ToDosDataContext);
 
@@ -92,4 +87,4 @@ const ToDoManager = ({
     </>
   );
 };
-export default ToDoManager
+export default ToDoManager;

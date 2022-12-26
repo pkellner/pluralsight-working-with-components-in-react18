@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <TodosDataProvider>
-      <Layout toggleTheme={toggleTheme} darkTheme={darkTheme}  >
+      <Layout toggleTheme={toggleTheme} darkTheme={darkTheme}>
         <ToDoListWithToolbar
           displayStatus={displayStatus}
           setDisplayStatus={setDisplayStatus}
