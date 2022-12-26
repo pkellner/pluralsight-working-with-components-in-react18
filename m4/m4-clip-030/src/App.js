@@ -2,8 +2,6 @@ import { useState } from "react";
 import ToDoListWithToolbar from "./components/todo/ToDoListWithToolbar";
 import { TodosDataProvider } from "./contexts/ToDosDataContext";
 import ToDoManager from "./components/todo/ToDoManager";
-import Header from "./components/layout/Header";
-import Footer from "./components/layout/Footer";
 import Layout from "./components/layout/Layout";
 
 const App = () => {
