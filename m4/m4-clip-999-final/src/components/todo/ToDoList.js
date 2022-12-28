@@ -1,5 +1,3 @@
-import { useContext } from "react";
-import { ThemeContext } from "../../contexts/ThemeContext";
 import ToDo from "./ToDo";
 
 const ToDoList = ({
@@ -12,9 +10,8 @@ const ToDoList = ({
   handleEdit,
   idUpdating,
 }) => {
-
   return (
-    <div className="tasks" >
+    <div className="tasks">
       {toDoList
         .filter((todo) => {
           if (displayStatus === "all") {

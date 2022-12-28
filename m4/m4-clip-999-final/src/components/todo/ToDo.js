@@ -1,6 +1,3 @@
-import { useContext } from "react";
-import { ThemeContext } from "../../contexts/ThemeContext";
-
 const ToDo = ({
   todoItem,
   handleToggleCompleted,
@@ -8,7 +5,6 @@ const ToDo = ({
   handleEdit,
   idUpdating,
 }) => {
-
   return (
     <div
       key={todoItem.id}

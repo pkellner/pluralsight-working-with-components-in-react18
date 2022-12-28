@@ -3,8 +3,6 @@ import { ThemeContext } from "../../contexts/ThemeContext";
 
 const Header = () => {
   const { darkTheme, toggleTheme } = useContext(ThemeContext);
-  
-
 
   return (
     <header>

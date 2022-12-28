@@ -3,7 +3,7 @@ import ToDoListWithToolbar from "./components/todo/ToDoListWithToolbar";
 import { TodosDataProvider } from "./contexts/ToDosDataContext";
 import ToDoManager from "./components/todo/ToDoManager";
 import Layout from "./components/layout/Layout";
-import {ThemeProvider} from "./contexts/ThemeContext";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 const App = () => {
   const [displayStatus, setDisplayStatus] = useState("all"); // all, pending, completed

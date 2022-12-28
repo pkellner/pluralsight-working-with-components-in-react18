@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import { useContext } from "react";
-import {ThemeContext, ThemeProvider} from "../../contexts/ThemeContext";
+import { ThemeContext, ThemeProvider } from "../../contexts/ThemeContext";
 
 const Inner = (props) => {
   const { darkTheme } = useContext(ThemeContext);
@@ -21,7 +21,7 @@ const Layout = (props) => {
     <ThemeProvider>
       <Inner {...props}></Inner>
     </ThemeProvider>
-  )
-}
+  );
+};
 
 export default Layout;

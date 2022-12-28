@@ -1,8 +1,8 @@
-import {ThemeContext} from "../../App";
-import {useContext} from "react";
+import { ThemeContext } from "../../App";
+import { useContext } from "react";
 
 const Header = ({ layoutVersion }) => {
-  const {darkTheme, toggleTheme} = useContext(ThemeContext);
+  const { darkTheme, toggleTheme } = useContext(ThemeContext);
   return (
     <header>
       <h2>To-do List</h2>
