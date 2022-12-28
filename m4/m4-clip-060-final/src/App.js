@@ -3,7 +3,6 @@ import ToDoListWithToolbar from "./components/todo/ToDoListWithToolbar";
 import { TodosDataProvider } from "./contexts/ToDosDataContext";
 import ToDoManager from "./components/todo/ToDoManager";
 import Layout from "./components/layout/Layout";
-import {ThemeProvider} from "./contexts/ThemeContext";
 
 const App = () => {
   const [displayStatus, setDisplayStatus] = useState("all"); // all, pending, completed
@@ -12,24 +11,22 @@ const App = () => {
 
   return (
     <TodosDataProvider>
-      <ThemeProvider>
-        <Layout>
-          <ToDoListWithToolbar
+      <Layout>
+        <ToDoListWithToolbar
+          displayStatus={displayStatus}
+          setDisplayStatus={setDisplayStatus}
+          import={important}
+          setImportant={setImportant}
+          searchText={searchText}
+          setSearchText={setSearchText}
+        >
+          <ToDoManager
             displayStatus={displayStatus}
-            setDisplayStatus={setDisplayStatus}
-            import={important}
-            setImportant={setImportant}
+            important={important}
             searchText={searchText}
-            setSearchText={setSearchText}
-          >
-            <ToDoManager
-              displayStatus={displayStatus}
-              important={important}
-              searchText={searchText}
-            />
-          </ToDoListWithToolbar>
-        </Layout>
-      </ThemeProvider>
+          />
+        </ToDoListWithToolbar>
+      </Layout>
     </TodosDataProvider>
   );
 };

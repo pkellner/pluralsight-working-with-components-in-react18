@@ -1,9 +1,9 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import { useContext } from "react";
-import {ThemeContext} from "../../contexts/ThemeContext";
+import {ThemeContext, ThemeProvider} from "../../contexts/ThemeContext";
 
-const Layout = (props) => {
+const Inner = (props) => {
   const { darkTheme } = useContext(ThemeContext);
   const layoutVersion = "Layout Version 2.0";
   return (
@@ -14,5 +14,14 @@ const Layout = (props) => {
     </div>
   );
 };
+
+// need props to pass through, otherwise, props.children will not include the children of this Layout
+const Layout = (props) => {
+  return (
+    <ThemeProvider>
+      <Inner {...props}></Inner>
+    </ThemeProvider>
+  )
+}
 
 export default Layout;
