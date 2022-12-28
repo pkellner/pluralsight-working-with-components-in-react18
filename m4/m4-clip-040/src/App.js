@@ -33,7 +33,6 @@ const App = () => {
               displayStatus={displayStatus}
               important={important}
               searchText={searchText}
-              darkTheme={darkTheme}
             />
           </ToDoListWithToolbar>
         </Layout>
