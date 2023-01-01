@@ -1,23 +1,25 @@
-import { useState } from "react";
-import ToDoListWithToolbar
-  from "./components/todo/ToDoListWithToolbar";
-import { TodosDataProvider }
-  from "./contexts/ToDosDataContext";
-import ToDoManager
-  from "./components/todo/ToDoManager";
+import { useState, createContext } from "react";
+import ToDoListWithToolbar from "./components/todo/ToDoListWithToolbar";
+import { TodosDataProvider } from "./contexts/ToDosDataContext";
+import ToDoManager from "./components/todo/ToDoManager";
 import Layout from "./components/layout/Layout";
-import { ThemeProvider }
-  from "./contexts/ThemeContext";
+
+export const ThemeContext = createContext({});
 
 const App = () => {
-  const [displayStatus, setDisplayStatus] =
-    useState("all"); // all, pending, completed
+  // all, pending, completed
+  const [displayStatus, setDisplayStatus] = useState("all");
   const [important, setImportant] = useState(false);
   const [searchText, setSearchText] = useState("");
 
-  return (
+  const [darkTheme, setDarkTheme] = useState(false);
+  const toggleTheme = () => {
+    setDarkTheme(!darkTheme);
+  };
+
+   return (
     <TodosDataProvider>
-      <ThemeProvider>
+      <ThemeContext.Provider value={{darkTheme, toggleTheme}}>
         <Layout>
           <ToDoListWithToolbar
             displayStatus={displayStatus}
@@ -34,7 +36,7 @@ const App = () => {
             />
           </ToDoListWithToolbar>
         </Layout>
-      </ThemeProvider>
+      </ThemeContext.Provider>
     </TodosDataProvider>
   );
 };

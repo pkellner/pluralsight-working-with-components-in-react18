@@ -14,7 +14,7 @@ const ToDoListWithToolbar = ({
     <ToDoFilterToolbar
       displayStatus={displayStatus}
       setDisplayStatus={setDisplayStatus}
-      important={important}
+      import={important}
       setImportant={setImportant}
       searchText={searchText}
       setSearchText={setSearchText}
