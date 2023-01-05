@@ -1,0 +1,9 @@
+/Users/pkellner/repos/pluralsight-working-with-components-in-react18/m4/m4-clip-030/package.json
+/Users/pkellner/repos/pluralsight-working-with-components-in-react18/m4/m4-clip-040/package.json
+/Users/pkellner/repos/pluralsight-working-with-components-in-react18/m4/m4-clip-050/package.json
+/Users/pkellner/repos/pluralsight-working-with-components-in-react18/m4/m4-clip-060/package.json
+/Users/pkellner/repos/pluralsight-working-with-components-in-react18/m4/m4-clip-080/package.json
+/Users/pkellner/repos/pluralsight-working-with-components-in-react18/m4/m4-clip-090/.next/package.json
+/Users/pkellner/repos/pluralsight-working-with-components-in-react18/m4/m4-clip-090/package.json
+/Users/pkellner/repos/pluralsight-working-with-components-in-react18/m4/m4-clip-100/.next/package.json
+/Users/pkellner/repos/pluralsight-working-with-components-in-react18/m4/m4-clip-100/package.json
