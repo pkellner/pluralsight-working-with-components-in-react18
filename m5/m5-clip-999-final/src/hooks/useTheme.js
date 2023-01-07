@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useDebugValue, useState } from "react";
 
 export default function useTheme() {
   const [darkTheme, setDarkTheme] = useState(false);
@@ -10,6 +10,8 @@ export default function useTheme() {
     darkTheme,
     toggleTheme,
   };
+
+  useDebugValue(`theme:${darkTheme ? "dark" : "light"}`);
 
   return value;
 }
