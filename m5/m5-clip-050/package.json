@@ -1,0 +1,29 @@
+{
+  "name": "designing-components-in-react-pluralsight-course",
+  "author": "Peter Kellner",
+  "version": "1.0.0",
+  "description": "Designing Components in React Course Demo Files",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [
+    "react",
+    "JavaScript",
+    "Pluralsight"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "next": "^13.0.6",
+    "react": "^18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "8.29.0",
+    "eslint-config-next": "13.0.6"
+  }
+}

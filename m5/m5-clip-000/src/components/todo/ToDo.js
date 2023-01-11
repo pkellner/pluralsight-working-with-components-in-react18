@@ -1,31 +1,10 @@
-import {useContext, useDebugValue} from "react";
-import { ThemeContext } from "../../contexts/ThemeContext";
-import ErrorBoundary from "../common/ErrorBoundary";
-
-const ToDoErrorBoundary = (props) => (
-  <div className="single-task text-bg-danger">
-    ERROR PROCESSING TODO ITEM.
-    <br /> JSON: {JSON.stringify(props)}
-  </div>
-);
-
-const Inner = ({
+const ToDo = ({
   todoItem,
   handleToggleCompleted,
   handleDelete,
   handleEdit,
   idUpdating,
 }) => {
-  //throw "error in ToDo.js";
-  // or change db.json file
-  // "todos": [
-  //     {
-  //       "id": 2,
-  //       "todoTextx": "Do laundry",
-  //       "completed": false,
-  //       "important": true
-  //     },
-
   return (
     <div
       key={todoItem.id}
@@ -41,7 +20,7 @@ const Inner = ({
             <i className="fa fa-exclamation-circle"></i>
           </span>
         ) : null}
-        {todoItem.todoText.slice(0, 60)}
+        {todoItem.todoText}
       </div>
 
       {idUpdating === todoItem.id ? (
@@ -78,14 +57,6 @@ const Inner = ({
         </button>
       </div>
     </div>
-  );
-};
-
-const ToDo = (props) => {
-  return (
-    <ErrorBoundary errorUI={<ToDoErrorBoundary {...props}></ToDoErrorBoundary>}>
-      <Inner {...props}></Inner>
-    </ErrorBoundary>
   );
 };
 

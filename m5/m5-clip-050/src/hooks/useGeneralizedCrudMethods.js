@@ -1,11 +1,11 @@
-import { useDebugValue, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 const LOADING_STATES = ["loading", "errored", "success"];
 
 const useGeneralizedCrudMethods = (url, errorNotificationFn) => {
   const [data, setData] = useState();
-  const [error, setError] = useState("");
+  const [error, setError] = useState();
   const [loadingStatus, setLoadingStatus] = useState("loading");
 
   if (!url || url.length === 0) {
