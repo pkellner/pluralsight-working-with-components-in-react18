@@ -4,14 +4,8 @@ import ToDoEditForm from "./ToDoEditForm";
 import ToDoList from "./ToDoList";
 import ToDoAddForm from "./ToDoAddForm";
 
-const ToDoManager = ({
-  displayStatus,
-  important,
-  searchText,
-  darkTheme,
-}) => {
-  const { todoList, updateTodo, createTodo, deleteTodo } =
-    useContext(ToDosDataContext);
+const ToDoManager = ({ displayStatus, important, searchText, darkTheme }) => {
+  const { todoList, updateTodo, createTodo, deleteTodo } = useContext(ToDosDataContext);
 
   const [todoRecord, setTodoRecord] = useState({
     todoText: "",
@@ -60,38 +54,27 @@ const ToDoManager = ({
   };
 
   if (!todoList) {
-    return (
-      <div className="loading-state-canvas">Loading...</div>
-    );
+    return <div className="loading-state-canvas">Loading...</div>;
   }
 
   return (
     <>
       <div className="form">
-        <ToDoAddForm
-          visible={addOrEdit === "add"}
-          add={add}
-          darkTheme={darkTheme}
-        />
+        <ToDoAddForm visible={addOrEdit === "add"}
+          add={add} darkTheme={darkTheme} />
 
         <ToDoEditForm
-          visible={addOrEdit === "edit"}
-          update={handleUpdate}
-          todoRecord={todoRecord}
-          setTodoRecord={setTodoRecord}
+          visible={addOrEdit === "edit"} update={handleUpdate}
+          todoRecord={todoRecord} setTodoRecord={setTodoRecord}
           setAddOrEdit={setAddOrEdit}
         />
       </div>
 
       <ToDoList
-        displayStatus={displayStatus}
-        important={important}
-        searchText={searchText}
-        toDoList={todoList}
-        handleToggle={handleToggle}
-        handleDelete={handleDelete}
-        handleEdit={handleEdit}
-        idUpdating={idUpdating}
+        displayStatus={displayStatus} important={important}
+        searchText={searchText} toDoList={todoList}
+        handleToggle={handleToggle} handleDelete={handleDelete}
+        handleEdit={handleEdit} idUpdating={idUpdating}
         darkTheme={darkTheme}
       />
     </>

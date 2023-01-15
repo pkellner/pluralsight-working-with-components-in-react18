@@ -53,6 +53,7 @@ const ToDoList = ({
               handleDelete={handleDelete}
               handleEdit={handleEdit}
               idUpdating={idUpdating}
+              todoItemcompleted={todo.completed}
             />
           );
         })}

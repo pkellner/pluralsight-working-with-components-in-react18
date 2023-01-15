@@ -3,13 +3,13 @@
     {
       "id": 1,
       "todoText": "Give dog a bath",
-      "completed": true,
+      "completed": false,
       "important": false
     },
     {
       "id": 2,
       "todoText": "Do laundry",
-      "completed": true,
+      "completed": false,
       "important": false
     },
     {
