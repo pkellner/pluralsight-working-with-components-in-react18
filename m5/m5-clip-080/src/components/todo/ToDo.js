@@ -1,3 +1,4 @@
+import TodoItemText from "./TodoItemText";
 const ToDo = ({
   todoItem,
   handleToggleCompleted,
@@ -5,7 +6,6 @@ const ToDo = ({
   handleEdit,
   idUpdating,
 }) => {
-  console.log(`ToDo: ${todoItem.id}:${todoItem.todoText}`);
   return (
     <div
       key={todoItem.id}
@@ -16,12 +16,7 @@ const ToDo = ({
           return handleToggleCompleted(todoItem.id);
         }}
       >
-        {todoItem.important ? (
-          <span className="badge warning-bg">
-            <i className="fa fa-exclamation-circle"></i>
-          </span>
-        ) : null}
-        {todoItem.todoText}
+        <TodoItemText important={todoItem.important} todoText={todoItem.todoText} />
       </div>
 
       {idUpdating === todoItem.id ? (

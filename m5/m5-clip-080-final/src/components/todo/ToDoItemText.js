@@ -12,4 +12,5 @@ function TodoItemText({ important, todoText }) {
   </>;
 }
 
-export default memo(TodoItemText);
+//export default memo(TodoItemText);
+export default TodoItemText;

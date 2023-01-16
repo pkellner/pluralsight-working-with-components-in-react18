@@ -1,4 +1,5 @@
 import TodoItemText from "./ToDoItemText";
+import { memo } from "react";
 
 const ToDo = ({
   todoItem,
@@ -59,3 +60,11 @@ const ToDo = ({
 };
 
 export default ToDo;
+
+// export default memo(ToDo, (prevProps, nextProps) => {
+//   return !(
+//     prevProps.todoItem.completed != nextProps.todoItem.completed ||
+//     prevProps.idUpdating === prevProps.todoItem.id ||
+//     nextProps.idUpdating === nextProps.todoItem.id
+//   );
+// });

@@ -10,7 +10,7 @@
       "id": 2,
       "todoText": "Do laundry",
       "completed": true,
-      "important": false
+      "important": true
     },
     {
       "id": 3,
