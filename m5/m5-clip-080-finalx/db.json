@@ -15,7 +15,7 @@
     {
       "id": 3,
       "todoText": "Wash clothes",
-      "completed": true,
+      "completed": false,
       "important": false
     },
     {

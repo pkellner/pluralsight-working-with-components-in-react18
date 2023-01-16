@@ -1,5 +1,3 @@
-import TodoItemText from "./ToDoItemText";
-
 const ToDo = ({
   todoItem,
   handleToggleCompleted,
@@ -7,7 +5,6 @@ const ToDo = ({
   handleEdit,
   idUpdating,
 }) => {
-  //console.log(`ToDo: ${todoItem.id}:${todoItem.todoText}`);
   return (
     <div
       key={todoItem.id}
@@ -18,9 +15,14 @@ const ToDo = ({
           return handleToggleCompleted(todoItem.id);
         }}
       >
-        <TodoItemText important={todoItem.important} todoText={todoItem.todoText} />
+        {todoItem.important ? (
+          <span className="badge warning-bg">
+            <i className="fa fa-exclamation-circle"></i>
+          </span>
+        ) : null}
+        {todoItem.todoText}
       </div>
-  
+
       {idUpdating === todoItem.id ? (
         <button className="btn btn-primary busy-spinner" type="button" disabled>
           <span
@@ -31,7 +33,7 @@ const ToDo = ({
           <span className="visually-hidden">Loading...</span>
         </button>
       ) : null}
-  
+
       <div className="task-actions">
         <button
           className="btn edit"
@@ -40,7 +42,7 @@ const ToDo = ({
         >
           <i className="fas fa-pencil-alt"></i>
         </button>
-    
+
         <button
           className="btn delete"
           title="Delete"
