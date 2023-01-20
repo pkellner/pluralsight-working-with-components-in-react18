@@ -9,7 +9,11 @@ const ToDo = ({
   return (
     <div
       key={todoItem.id}
-      className={todoItem.completed ? "single-task completed" : "single-task"}
+      className={
+        todoItem.completed
+          ? "single-task completed"
+          : "single-task"
+      }
     >
       <div
         onClick={() => {
@@ -25,13 +29,19 @@ const ToDo = ({
       </div>
 
       {idUpdating === todoItem.id ? (
-        <button className="btn btn-primary busy-spinner" type="button" disabled>
+        <button
+          className="btn btn-primary busy-spinner"
+          type="button"
+          disabled
+        >
           <span
             className="spinner-border spinner-border-sm"
             role="status"
             aria-hidden="true"
           ></span>
-          <span className="visually-hidden">Loading...</span>
+          <span className="visually-hidden">
+            Loading...
+          </span>
         </button>
       ) : null}
 

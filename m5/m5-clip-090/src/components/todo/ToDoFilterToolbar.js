@@ -27,7 +27,9 @@ const ToDoFilterToolbar = ({
             <li className="nav-item">
               <a
                 className={
-                  displayStatus === "all" ? "nav-link active" : "nav-link"
+                  displayStatus === "all"
+                    ? "nav-link active"
+                    : "nav-link"
                 }
                 onClick={() => setDisplayStatus("all")}
                 href="#"
@@ -38,7 +40,9 @@ const ToDoFilterToolbar = ({
             <li className="nav-item">
               <a
                 className={
-                  displayStatus === "pending" ? "nav-link active" : "nav-link"
+                  displayStatus === "pending"
+                    ? "nav-link active"
+                    : "nav-link"
                 }
                 onClick={() => setDisplayStatus("pending")}
                 href="#"
@@ -49,9 +53,13 @@ const ToDoFilterToolbar = ({
             <li className="nav-item">
               <a
                 className={
-                  displayStatus === "completed" ? "nav-link active" : "nav-link"
+                  displayStatus === "completed"
+                    ? "nav-link active"
+                    : "nav-link"
                 }
-                onClick={() => setDisplayStatus("completed")}
+                onClick={() =>
+                  setDisplayStatus("completed")
+                }
                 href="#"
               >
                 Completed

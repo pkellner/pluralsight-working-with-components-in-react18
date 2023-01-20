@@ -16,11 +16,16 @@ function useCountTracker() {
 }
 
 export default function App() {
-  const { count1, count2, setCount1, setCount2 } = useCountTracker();
+  const { count1, count2, setCount1, setCount2 } =
+    useCountTracker();
   return (
     <div className="list-group container p-4 gap-2">
-      <button onClick={() => setCount1(count1 + 1)}>{count1}</button>
-      <button onClick={() => setCount2(count2 + 1)}>{count2}</button>
+      <button onClick={() => setCount1(count1 + 1)}>
+        {count1}
+      </button>
+      <button onClick={() => setCount2(count2 + 1)}>
+        {count2}
+      </button>
     </div>
   );
 }
