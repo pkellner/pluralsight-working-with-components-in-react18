@@ -1,5 +1,9 @@
 import React from "react";
 
+function captureMessage(message) {
+  console.log(`ErrorBoundary:${message}`);
+}
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -14,6 +18,7 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     // You can also log the error to an error reporting service
     //logErrorToMyService(error, errorInfo);
+    captureMessage('Hello, from inside componentDidCatch in ErrorBoundary!');
   }
   
   render() {
@@ -30,3 +35,18 @@ class ErrorBoundary extends React.Component {
 }
 
 export default ErrorBoundary;
+
+
+/*
+https://github.com/getsentry/sentry-javascript
+
+import { init, captureMessage } from '@sentry/browser';
+
+init({
+  dsn: '__DSN__',
+  // ...
+});
+
+captureMessage('Hello, world!');
+
+ */
