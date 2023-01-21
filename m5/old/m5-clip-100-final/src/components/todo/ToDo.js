@@ -1,5 +1,17 @@
 import ErrorBoundary from "../common/ErrorBoundary";
 
+const debug = true;
+
+const ToDoErrorBoundary = (props) => (
+  <div className="single-task text-bg-danger">
+    {debug ? (
+      <b>ERROR PROCESSING ToDo: {JSON.stringify(props)}</b>
+    ) : (
+      <b>Problem displaying message</b>
+    )}
+  </div>
+);
+
 const Inner = ({
   todoItem,
   handleToggleCompleted,
@@ -10,11 +22,7 @@ const Inner = ({
   return (
     <div
       key={todoItem.id}
-      className={
-        todoItem.completed
-          ? "single-task completed"
-          : "single-task"
-      }
+      className={todoItem.completed ? "single-task completed" : "single-task"}
     >
       <div
         onClick={() => {
@@ -26,23 +34,17 @@ const Inner = ({
             <i className="fa fa-exclamation-circle"></i>
           </span>
         ) : null}
-        {todoItem.todoText.slice(0,60)}
+        {todoItem.todoText.slice(0, 60)}
       </div>
 
       {idUpdating === todoItem.id ? (
-        <button
-          className="btn btn-primary busy-spinner"
-          type="button"
-          disabled
-        >
+        <button className="btn btn-primary busy-spinner" type="button" disabled>
           <span
             className="spinner-border spinner-border-sm"
             role="status"
             aria-hidden="true"
           ></span>
-          <span className="visually-hidden">
-            Loading...
-          </span>
+          <span className="visually-hidden">Loading...</span>
         </button>
       ) : null}
 
@@ -74,10 +76,10 @@ const Inner = ({
 
 const ToDo = (props) => {
   return (
-    <ErrorBoundary>
-      <Inner {...props} />
+    <ErrorBoundary errorUI={<ToDoErrorBoundary {...props}></ToDoErrorBoundary>}>
+      <Inner {...props}></Inner>
     </ErrorBoundary>
-  )
-}
+  );
+};
 
 export default ToDo;

@@ -2,8 +2,8 @@
   "todos": [
     {
       "id": 1,
-      "todoTextXX": "Give dog a bath",
-      "completed": false,
+      "todoText": "Give dog a bath",
+      "completed": true,
       "important": false
     },
     {
@@ -22,7 +22,7 @@
       "id": 4,
       "todoText": "Vacuum living room",
       "completed": true,
-      "important": true
+      "important": false
     },
     {
       "id": 5,
@@ -52,6 +52,7 @@
       "id": 9,
       "todoText": "Do expense report",
       "completed": false,
+
       "important": false
     },
     {

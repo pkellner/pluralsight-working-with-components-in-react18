@@ -2,7 +2,7 @@
   "todos": [
     {
       "id": 1,
-      "todoTextXX": "Give dog a bath",
+      "todoText": "Give dog a bath",
       "completed": false,
       "important": false
     },
