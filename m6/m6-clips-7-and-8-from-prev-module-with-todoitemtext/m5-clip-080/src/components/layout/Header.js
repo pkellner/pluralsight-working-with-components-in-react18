@@ -1,4 +1,4 @@
-import { withTheme } from '../hocs/withTheme';
+import { withTheme } from "../hocs/withTheme";
 
 const Header = ({ layoutVersion, darkTheme, toggleTheme }) => {
   return (

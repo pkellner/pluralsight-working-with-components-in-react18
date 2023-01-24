@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-const EnhancedComponent = ({darkTheme, toggleTheme}) => {
+const EnhancedComponent = ({ darkTheme, toggleTheme }) => {
   // const [darkTheme, setDarkTheme] = useState(true);
   return (
     <div
@@ -11,7 +11,7 @@ const EnhancedComponent = ({darkTheme, toggleTheme}) => {
       My Site
     </div>
   );
-}
+};
 
 // THIS WITHTHEME BELOW WAS NOT COMPLETED AT THE END OF THIS MODULE.
 // IT IS HERE BECAUSE WITHOUT IT, THE APP WILL NOT BUILD (NPM RUN BUILD)
@@ -22,9 +22,7 @@ const EnhancedComponent = ({darkTheme, toggleTheme}) => {
 
 const withTheme = (Component) => {
   function Func(props) {
-    return (
-      <Component {...props} />
-    );
+    return <Component {...props} />;
   }
   return Func;
 };

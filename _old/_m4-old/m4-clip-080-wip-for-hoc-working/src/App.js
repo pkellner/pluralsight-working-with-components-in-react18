@@ -5,7 +5,6 @@ import ToDoManager from "./components/todo/ToDoManager";
 import Layout from "./components/layout/Layout";
 
 const App = () => {
-
   const [displayStatus, setDisplayStatus] = useState("all"); // all, pending, completed
   const [important, setImportant] = useState(false);
   const [searchText, setSearchText] = useState("");
@@ -14,11 +13,17 @@ const App = () => {
     <TodosDataProvider>
       <Layout>
         <ToDoListWithToolbar
-          displayStatus={displayStatus} setDisplayStatus={setDisplayStatus} important={important}
-          setImportant={setImportant} searchText={searchText} setSearchText={setSearchText}
+          displayStatus={displayStatus}
+          setDisplayStatus={setDisplayStatus}
+          important={important}
+          setImportant={setImportant}
+          searchText={searchText}
+          setSearchText={setSearchText}
         >
           <ToDoManager
-            displayStatus={displayStatus} important={important} searchText={searchText}
+            displayStatus={displayStatus}
+            important={important}
+            searchText={searchText}
           />
         </ToDoListWithToolbar>
       </Layout>

@@ -1,10 +1,9 @@
-import { useContext } from 'react';
+import { useContext } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { ThemeContext }
-  from "../../contexts/ThemeContext";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   const { darkTheme } = useContext(ThemeContext);
   const layoutVersion = "Layout Version 2.0";
   return (

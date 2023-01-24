@@ -13,7 +13,6 @@ function ToDoItem(props) {
     <div className={props.completed ? "completed" : ""}>
       {props.important ? "*" : ""} {props.text}
       {props.text}
-      
       {JSON.stringify(props)}
     </div>
   );

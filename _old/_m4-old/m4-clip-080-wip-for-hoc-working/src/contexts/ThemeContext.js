@@ -4,7 +4,9 @@ import { ThemeContext } from "../contexts/ThemeContext";
 export function withTheme(Component) {
   return (props) => {
     const { darkTheme, toggleTheme } = useContext(ThemeContext);
-    return <Component {...props} darkTheme={darkTheme} toggleTheme={toggleTheme} />;
+    return (
+      <Component {...props} darkTheme={darkTheme} toggleTheme={toggleTheme} />
+    );
   };
 }
 

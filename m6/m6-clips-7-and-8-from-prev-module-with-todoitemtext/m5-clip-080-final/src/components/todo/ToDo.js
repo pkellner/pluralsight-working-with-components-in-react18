@@ -19,9 +19,12 @@ const ToDo = ({
           return handleToggleCompleted(todoItem.id);
         }}
       >
-        <TodoItemText important={todoItem.important} todoText={todoItem.todoText} />
+        <TodoItemText
+          important={todoItem.important}
+          todoText={todoItem.todoText}
+        />
       </div>
-  
+
       {idUpdating === todoItem.id ? (
         <button className="btn btn-primary busy-spinner" type="button" disabled>
           <span
@@ -32,7 +35,7 @@ const ToDo = ({
           <span className="visually-hidden">Loading...</span>
         </button>
       ) : null}
-  
+
       <div className="task-actions">
         <button
           className="btn edit"
@@ -41,7 +44,7 @@ const ToDo = ({
         >
           <i className="fas fa-pencil-alt"></i>
         </button>
-    
+
         <button
           className="btn delete"
           title="Delete"

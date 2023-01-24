@@ -1,23 +1,27 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-const App = ({darkTheme, toggleTheme}) => {
+const App = ({ darkTheme, toggleTheme }) => {
   //
   return (
-    <div className="container" data-theme={darkTheme ? "dark" : "light"}
-      onClick={toggleTheme}>
+    <div
+      className="container"
+      data-theme={darkTheme ? "dark" : "light"}
+      onClick={toggleTheme}
+    >
       My Site
     </div>
   );
-  
-}
+};
 
 const withTheme = (Component) => {
   function Func(props) {
     const [darkTheme, setDarkTheme] = useState(true);
     return (
-      <Component {...props}
+      <Component
+        {...props}
         darkTheme={darkTheme}
-        toggleTheme={() => setDarkTheme(!darkTheme)} />
+        toggleTheme={() => setDarkTheme(!darkTheme)}
+      />
     );
   }
   return Func;

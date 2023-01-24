@@ -17,9 +17,9 @@ const App = () => {
     setDarkTheme(!darkTheme);
   };
 
-   return (
+  return (
     <TodosDataProvider>
-      <ThemeContext.Provider value={{darkTheme, toggleTheme}}>
+      <ThemeContext.Provider value={{ darkTheme, toggleTheme }}>
         <Layout>
           <ToDoListWithToolbar
             displayStatus={displayStatus}

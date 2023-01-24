@@ -5,10 +5,7 @@ export default function App() {
 
   return (
     <div>
-      <Header
-        darkTheme={darkTheme}
-        setDarkTheme={setDarkTheme}
-      />
+      <Header darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
       <div>Here is where blog posts would go...</div>
     </div>
   );

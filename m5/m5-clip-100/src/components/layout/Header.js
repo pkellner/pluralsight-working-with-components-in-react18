@@ -1,10 +1,6 @@
 import { withTheme } from "../hocs/withTheme";
 
-const Header = ({
-  layoutVersion,
-  darkTheme,
-  toggleTheme,
-}) => {
+const Header = ({ layoutVersion, darkTheme, toggleTheme }) => {
   return (
     <header>
       <h2>To-do List</h2>
@@ -19,10 +15,7 @@ const Header = ({
             toggleTheme();
           }}
         />
-        <label
-          htmlFor="toggleThemeId"
-          className="theme-toggle-checkbox-label"
-        >
+        <label htmlFor="toggleThemeId" className="theme-toggle-checkbox-label">
           <i className="fas fa-moon"></i>
           <i className="fas fa-sun"></i>
           <span className="ball"></span>

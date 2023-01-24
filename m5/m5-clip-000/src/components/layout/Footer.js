@@ -8,7 +8,7 @@ const Footer = () => {
   const totalItems = todoList?.length;
   const notCompletedItems = todoList?.filter((r) => !r.completed).length;
   const importantItems = todoList?.filter(
-    (r) => !r.completed && r.important,
+    (r) => !r.completed && r.important
   ).length;
 
   const handleClearCompleted = () => {

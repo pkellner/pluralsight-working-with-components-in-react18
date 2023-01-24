@@ -16,7 +16,10 @@ const ToDo = ({
           return handleToggleCompleted(todoItem.id);
         }}
       >
-        <TodoItemText important={todoItem.important} todoText={todoItem.todoText} />
+        <TodoItemText
+          important={todoItem.important}
+          todoText={todoItem.todoText}
+        />
       </div>
 
       {idUpdating === todoItem.id ? (

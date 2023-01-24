@@ -10,11 +10,7 @@ const Inner = ({
   return (
     <div
       key={todoItem.id}
-      className={
-        todoItem.completed
-          ? "single-task completed"
-          : "single-task"
-      }
+      className={todoItem.completed ? "single-task completed" : "single-task"}
     >
       <div
         onClick={() => {
@@ -26,23 +22,17 @@ const Inner = ({
             <i className="fa fa-exclamation-circle"></i>
           </span>
         ) : null}
-        {todoItem.todoText.slice(0,60)}
+        {todoItem.todoText.slice(0, 60)}
       </div>
 
       {idUpdating === todoItem.id ? (
-        <button
-          className="btn btn-primary busy-spinner"
-          type="button"
-          disabled
-        >
+        <button className="btn btn-primary busy-spinner" type="button" disabled>
           <span
             className="spinner-border spinner-border-sm"
             role="status"
             aria-hidden="true"
           ></span>
-          <span className="visually-hidden">
-            Loading...
-          </span>
+          <span className="visually-hidden">Loading...</span>
         </button>
       ) : null}
 
@@ -77,7 +67,7 @@ const ToDo = (props) => {
     <ErrorBoundary>
       <Inner {...props} />
     </ErrorBoundary>
-  )
-}
+  );
+};
 
 export default ToDo;

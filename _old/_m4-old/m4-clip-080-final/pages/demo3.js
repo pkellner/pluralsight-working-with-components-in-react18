@@ -28,8 +28,6 @@ export function withTheme(Component) {
       />
     );
   }
-  
+
   return Func;
 }
-
-
