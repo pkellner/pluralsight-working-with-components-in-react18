@@ -1,5 +1,3 @@
-
-
 function ToDoItemText({ important, todoText }) {
   return (
     <>
