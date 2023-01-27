@@ -4,19 +4,19 @@
       "id": 1,
       "todoText": "Give dog a bath",
       "completed": false,
-      "important": true
+      "important": false
     },
     {
       "id": 2,
       "todoText": "Do laundry",
       "completed": true,
-      "important": true
+      "important": false
     },
     {
       "id": 3,
       "todoText": "Wash clothes",
       "completed": false,
-      "important": true
+      "important": false
     },
     {
       "id": 4,
@@ -40,7 +40,7 @@
       "id": 7,
       "todoText": "Wash dishes",
       "completed": false,
-      "important": true
+      "important": false
     },
     {
       "id": 8,

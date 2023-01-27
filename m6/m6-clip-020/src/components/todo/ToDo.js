@@ -1,5 +1,4 @@
 import ErrorBoundary from "../common/ErrorBoundary";
-import ToDoItemText from "./ToDoItemText";
 
 const Inner = ({
   todoItem,
@@ -18,7 +17,12 @@ const Inner = ({
           return handleToggleCompleted(todoItem.id);
         }}
       >
-        <ToDoItemText important={todoItem.important} todoText={todoItem.todoText} />
+        {todoItem.important ? (
+          <span className="badge warning-bg">
+            <i className="fa fa-exclamation-circle"></i>
+          </span>
+        ) : null}
+        {todoItem.todoText.slice(0, 60)}
       </div>
 
       {idUpdating === todoItem.id ? (
