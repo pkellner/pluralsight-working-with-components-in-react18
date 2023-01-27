@@ -13,4 +13,7 @@ function ToDoItemText({ important, todoText }) {
   );
 }
 
+const memoizedComponent =
+  React.memo(originalComponent)
+
 export default memo(ToDoItemText);
