@@ -1,6 +1,6 @@
 import ErrorBoundary from "../common/ErrorBoundary";
 import ToDoItemText from "./ToDoItemText";
-import {memo} from "react";
+import { memo } from 'react';
 
 const Inner = ({
   todoItem,
