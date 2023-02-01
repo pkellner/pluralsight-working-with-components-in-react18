@@ -1,9 +1,9 @@
 import { useState, useDeferredValue } from "react";
 
-function ShowTodoList({ todoList, deferredSearch }) {
+function ShowTodoList({ list, search }) {
   return (
     <div>
-      {todoList.filter(rec => rec.includes(deferredSearch)).map((rec) => (
+      {list.filter(rec => rec.includes(search)).map((rec) => (
         <div key={rec}>{rec}</div>
       ))}
     </div>
@@ -24,7 +24,7 @@ function App() {
   return (
     <div>
       <input value={search} onChange={(e) => setSearch(e.target.value)} />
-      <ShowTodoList todoList={todoList} deferredSearch={search} />
+      <ShowTodoList list={todoList} search={deferredSearch} />
     </div>
   );
 }
