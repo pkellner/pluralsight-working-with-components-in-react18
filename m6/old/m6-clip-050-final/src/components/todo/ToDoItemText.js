@@ -1,4 +1,4 @@
-import {memo} from "react";
+import { memo } from "react";
 
 function ToDoItemText({ important, todoText }) {
   return (

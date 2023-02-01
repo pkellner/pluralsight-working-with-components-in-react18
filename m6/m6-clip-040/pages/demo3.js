@@ -24,3 +24,13 @@ export default function App() {
     </div>
   );
 }
+
+const memoizedComponent = React.memo(
+  originalComponent,
+  (prevProps, nextProps) => {
+    return (
+      prevProps.todoItem.important != nextProps.todoItem.important ||
+      prevProps.todoItem.itemText != nextProps.todoItem.itemText
+    );
+  }
+);

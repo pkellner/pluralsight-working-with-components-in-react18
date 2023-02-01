@@ -1,6 +1,4 @@
-
-
-function MyComponent({ myNumber}) {
+function MyComponent({ myNumber }) {
   const displayDate = new Date().toLocaleDateString();
   return (
     <div>

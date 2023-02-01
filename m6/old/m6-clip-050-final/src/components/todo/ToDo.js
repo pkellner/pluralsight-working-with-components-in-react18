@@ -1,6 +1,6 @@
 import ErrorBoundary from "../common/ErrorBoundary";
 import ToDoItemText from "./ToDoItemText";
-import {memo} from "react";
+import { memo } from "react";
 
 const Inner = ({
   todoItem,
@@ -19,7 +19,10 @@ const Inner = ({
           return handleToggleCompleted(todoItem.id);
         }}
       >
-        <ToDoItemText important={todoItem.important} todoText={todoItem.todoText} />
+        <ToDoItemText
+          important={todoItem.important}
+          todoText={todoItem.todoText}
+        />
       </div>
 
       {idUpdating === todoItem.id ? (

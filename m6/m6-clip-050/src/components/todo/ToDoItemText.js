@@ -1,4 +1,4 @@
-import {memo} from "react";
+import { memo } from "react";
 
 function ToDoItemText({ important, todoText }) {
   return (
@@ -12,8 +12,5 @@ function ToDoItemText({ important, todoText }) {
     </>
   );
 }
-
-const memoizedComponent =
-  React.memo(originalComponent)
 
 export default memo(ToDoItemText);
