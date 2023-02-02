@@ -8,6 +8,8 @@ const ToDoListWithToolbar = ({
   setImportant,
   searchText,
   setSearchText,
+  startTransition={startTransition},
+  isPending={isPending},
   children,
 }) => (
   <div>
@@ -18,6 +20,8 @@ const ToDoListWithToolbar = ({
       setImportant={setImportant}
       searchText={searchText}
       setSearchText={setSearchText}
+      startTransition={startTransition}
+      isPending={isPending}
     />
     {children}
   </div>

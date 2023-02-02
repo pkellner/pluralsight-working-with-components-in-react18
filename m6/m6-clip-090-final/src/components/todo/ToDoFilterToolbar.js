@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 const ToDoFilterToolbar = ({
   displayStatus,
@@ -7,7 +7,10 @@ const ToDoFilterToolbar = ({
   setImportant,
   searchText,
   setSearchText,
+   startTransition,
+   isPending,
 }) => {
+  const [searchTextResponsive, setSearchTextResponsive] = useState("");
   return (
     <nav className="navbar navbar-expand">
       <div className="container-fluid">
@@ -17,7 +20,10 @@ const ToDoFilterToolbar = ({
               <input
                 value={searchText}
                 onChange={(event) => {
-                  setSearchText(event.target.value);
+                  setSearchTextResponsive(event.target.value);
+                  startTransition(() => {
+                    setSearchText(event.target.value);
+                  });
                 }}
                 type="text"
                 className="form-search-text"
