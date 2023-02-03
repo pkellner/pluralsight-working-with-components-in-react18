@@ -18,7 +18,7 @@ const ToDoFilterToolbar = ({
           <div className="filters">
             <li className="nav-item">
               <input
-                value={searchText}
+                value={searchTextResponsive}
                 onChange={(event) => {
                   setSearchTextResponsive(event.target.value);
                   startTransition(() => setSearchText(event.target.value));
