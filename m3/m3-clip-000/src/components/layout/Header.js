@@ -15,7 +15,10 @@ const Header = ({ darkTheme, toggleTheme }) => {
             toggleTheme();
           }}
         />
-        <label htmlFor="toggleThemeId" className="theme-toggle-checkbox-label">
+        <label
+          htmlFor="toggleThemeId"
+          className="theme-toggle-checkbox-label"
+        >
           <i className="fas fa-moon"></i>
           <i className="fas fa-sun"></i>
           <span className="ball"></span>

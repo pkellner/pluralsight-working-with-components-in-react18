@@ -2,12 +2,11 @@ import { useState } from "react";
 import ToDoListWithToolbar from "./components/todo/ToDoListWithToolbar";
 import { TodosDataProvider } from "./contexts/ToDosDataContext";
 import ToDoManager from "./components/todo/ToDoManager";
-import Header from "./components/layout/Header";
-import Footer from "./components/layout/Footer";
 import Layout from "./components/layout/Layout";
 
 const App = () => {
-  const [displayStatus, setDisplayStatus] = useState("all"); // all, pending, completed
+  // all, pending, completed
+  const [displayStatus, setDisplayStatus] = useState("all");
   const [important, setImportant] = useState(false);
   const [searchText, setSearchText] = useState("");
 
@@ -18,7 +17,10 @@ const App = () => {
 
   return (
     <TodosDataProvider>
-      <Layout toggleTheme={toggleTheme} darkTheme={darkTheme}>
+      <Layout
+        toggleTheme={toggleTheme}
+        darkTheme={darkTheme}
+      >
         <ToDoListWithToolbar
           displayStatus={displayStatus}
           setDisplayStatus={setDisplayStatus}

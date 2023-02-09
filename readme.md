@@ -5,7 +5,7 @@
 
 | **Course**                                                                           | Release Date  |
 |-------------------------------------------------------------------------------------------------------------------------------|---------------|
-| **[Working with Components in React 18](https://pluralsight.com/courses/react-18-working-components/)**   *(this course)*     | xxx 2023      |
+| **[Working with Components in React 18](https://pluralsight.com/profile/author/peter-kellner)**   *(this course)*             | Coming 2023      |
 | **[Using Hooks in React 18](https://pluralsight.com/courses/react-18-using-hooks/)**                                          | November 2022 |
 | **[What is React](https://pluralsight.com/courses/react-what-is/)**                                                           | August 2022   |
 | **[What's New in React 18](https://pluralsight.com/courses/react-18-whats-new/)**                                             | May 2022      |
@@ -22,8 +22,8 @@ Creating UIs in React is all about creating independent components that seamless
 
 ## Getting Started
 1. **Install [Node 16 (latest-verson) with NPM 17](https://nodejs.org)**.
-2. **Clone this repository.** - `https://github.com/pkellner/pluralsight-what-is-react` or [download the zip](https://github.com/pkellner/pluralsight-what-is-react/archive/master.zip)
-3. **Set your default directory to which module you want (example: `cd m3-hands-on-moving-to-concurrent-rendering` - `cd m4-hands-on-with-the-new-react-hooks`
+2. **Clone this repository.** - `https://github.com/pkellner/pluralsight-working-with-components-in-react18` or [download the zip](https://github.com/pkellner/pluralsight-working-with-components-in-react18/archive/master.zip)
+3. **Set your default directory to which module you want (example: `cd m4` - `cd m4-clip-040`
 4. **Install Node Packages with Dependencies.** - `npm install`
 
 

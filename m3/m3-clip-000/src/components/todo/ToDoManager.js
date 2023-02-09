@@ -4,7 +4,12 @@ import ToDoEditForm from "./ToDoEditForm";
 import ToDoList from "./ToDoList";
 import ToDoAddForm from "./ToDoAddForm";
 
-const ToDoManager = ({ displayStatus, important, searchText, darkTheme }) => {
+const ToDoManager = ({
+  displayStatus,
+  important,
+  searchText,
+  darkTheme,
+}) => {
   const { todoList, updateTodo, createTodo, deleteTodo } =
     useContext(ToDosDataContext);
 
@@ -15,11 +20,15 @@ const ToDoManager = ({ displayStatus, important, searchText, darkTheme }) => {
   });
   const [idUpdating, setIdUpdating] = useState(0);
 
-  const [addOrEdit, setAddOrEdit] = useState("add"); // "add" or "edit"
+  // "add" or "edit"
+  const [addOrEdit, setAddOrEdit] = useState("add");
 
   const handleToggle = (id) => {
     const rec = todoList.find((rec) => rec.id === id);
-    const recUpdated = { ...rec, completed: !rec.completed };
+    const recUpdated = {
+      ...rec,
+      completed: !rec.completed,
+    };
     setIdUpdating(rec.id);
     updateTodo(recUpdated, () => {
       setIdUpdating(0);
@@ -52,7 +61,9 @@ const ToDoManager = ({ displayStatus, important, searchText, darkTheme }) => {
   };
 
   if (!todoList) {
-    return <div className="loading-state-canvas">Loading...</div>;
+    return (
+      <div className="loading-state-canvas">Loading...</div>
+    );
   }
 
   return (

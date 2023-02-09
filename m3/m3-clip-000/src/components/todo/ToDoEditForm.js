@@ -13,16 +13,25 @@ const ToDoEditForm = ({
             value={todoRecord.todoText}
             checked={true}
             onChange={(e) => {
-              setTodoRecord({ ...todoRecord, todoText: e.target.value });
+              setTodoRecord({
+                ...todoRecord,
+                todoText: e.target.value,
+              });
             }}
             placeholder="Enter To-do..."
             className="form-control"
             id="addTodo"
           />
-          <label htmlFor="addTodoCompleted">Enter To-do...</label>
+          <label htmlFor="addTodoCompleted">
+            Enter To-do...
+          </label>
         </div>
 
-        <button className="btn btn-theme-primary" id="push" onClick={update}>
+        <button
+          className="btn btn-theme-primary"
+          id="push"
+          onClick={update}
+        >
           Update Item
         </button>
         <button
@@ -49,7 +58,10 @@ const ToDoEditForm = ({
               });
             }}
           />
-          <label className="form-check-label" htmlFor="importantCheckbox">
+          <label
+            className="form-check-label"
+            htmlFor="importantCheckbox"
+          >
             Important
           </label>
         </div>
@@ -66,7 +78,10 @@ const ToDoEditForm = ({
               });
             }}
           />
-          <label className="form-check-label" htmlFor="completedCheckbox">
+          <label
+            className="form-check-label"
+            htmlFor="completedCheckbox"
+          >
             Completed
           </label>
         </div>

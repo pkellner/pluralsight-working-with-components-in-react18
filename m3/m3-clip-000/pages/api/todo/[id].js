@@ -6,14 +6,17 @@ const delayTime = 1000; // milliseconds added to all REST calls
 
 const writeFile = promisify(fs.writeFile);
 const readFile = promisify(fs.readFile);
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const delay = (ms) =>
+  new Promise((resolve) => setTimeout(resolve, ms));
 
 export default async function userHandler(req, res) {
   const method = req?.method;
   const recordFromBody = req?.body;
   const jsonFile = path.resolve("./", "db.json");
 
-  const ids = (req?.query?.id).split(",", 50).map((id) => parseInt(id)); // only support 50 items max
+  const ids = (req?.query?.id)
+    .split(",", 50)
+    .map((id) => parseInt(id)); // only support 50 items max
   const id = ids.length === 1 ? ids[0] : undefined; // likely never happen because if no value, then the URL goes to GET instead
 
   async function getTodosData() {
@@ -46,8 +49,8 @@ export default async function userHandler(req, res) {
               todos: newRecsArray,
             },
             null,
-            2
-          )
+            2,
+          ),
         );
         res.status(200).json(recordFromBody);
         console.log(`PUT /api/todo/${id} status: 200`);
@@ -73,8 +76,8 @@ export default async function userHandler(req, res) {
               todos: newRecsArray,
             },
             null,
-            2
-          )
+            2,
+          ),
         );
         res.status(200).json(recordFromBody);
         console.log(`POST /api/todo/${id} status: 200`);
@@ -98,18 +101,25 @@ export default async function userHandler(req, res) {
               todos: newRecsArray,
             },
             null,
-            2
-          )
+            2,
+          ),
         );
         res.status(200).json(recordFromBody);
-        console.log(`DELETE /api/todo/${ids.toString()} status: 200`);
+        console.log(
+          `DELETE /api/todo/${ids.toString()} status: 200`,
+        );
       } catch (e) {
         console.log("/api/todo DELETE error:", e);
       }
       break;
 
     default:
-      res.setHeader("Allow", ["GET", "PUT", "POST", "DELETE"]);
+      res.setHeader("Allow", [
+        "GET",
+        "PUT",
+        "POST",
+        "DELETE",
+      ]);
       res.status(405).end(`Method ${method} Not Allowed`);
   }
 }
