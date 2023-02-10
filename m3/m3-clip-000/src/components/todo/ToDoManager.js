@@ -1,4 +1,7 @@
-import { useContext, useState } from "react";
+import {
+  useContext,
+  useState,
+} from "react";
 import { ToDosDataContext } from "../../contexts/ToDosDataContext";
 import ToDoEditForm from "./ToDoEditForm";
 import ToDoList from "./ToDoList";
@@ -10,21 +13,30 @@ const ToDoManager = ({
   searchText,
   darkTheme,
 }) => {
-  const { todoList, updateTodo, createTodo, deleteTodo } =
-    useContext(ToDosDataContext);
+  const {
+    todoList,
+    updateTodo,
+    createTodo,
+    deleteTodo,
+  } = useContext(ToDosDataContext);
 
-  const [todoRecord, setTodoRecord] = useState({
-    todoText: "",
-    completed: false,
-    important: false,
-  });
-  const [idUpdating, setIdUpdating] = useState(0);
+  const [todoRecord, setTodoRecord] =
+    useState({
+      todoText: "",
+      completed: false,
+      important: false,
+    });
+  const [idUpdating, setIdUpdating] =
+    useState(0);
 
   // "add" or "edit"
-  const [addOrEdit, setAddOrEdit] = useState("add");
+  const [addOrEdit, setAddOrEdit] =
+    useState("add");
 
   const handleToggle = (id) => {
-    const rec = todoList.find((rec) => rec.id === id);
+    const rec = todoList.find(
+      (rec) => rec.id === id,
+    );
     const recUpdated = {
       ...rec,
       completed: !rec.completed,
@@ -62,7 +74,9 @@ const ToDoManager = ({
 
   if (!todoList) {
     return (
-      <div className="loading-state-canvas">Loading...</div>
+      <div className="loading-state-canvas">
+        Loading...
+      </div>
     );
   }
 

@@ -5,14 +5,18 @@ const Layout = (props) => {
   return (
     <div
       className="container"
-      data-theme={props.darkTheme ? "dark" : "light"}
+      data-theme={
+        props.darkTheme
+          ? "dark"
+          : "light"
+      }
     >
       <Header
         toggleTheme={props.toggleTheme}
         darkTheme={props.darkTheme}
       />
       {props.children}
-      <br/>
+      <br />
       <Footer />
     </div>
   );

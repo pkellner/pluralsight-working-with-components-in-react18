@@ -6,11 +6,17 @@ import Layout from "./components/layout/Layout";
 
 const App = () => {
   // all, pending, completed
-  const [displayStatus, setDisplayStatus] = useState("all");
-  const [important, setImportant] = useState(false);
-  const [searchText, setSearchText] = useState("");
+  const [
+    displayStatus,
+    setDisplayStatus,
+  ] = useState("all");
+  const [important, setImportant] =
+    useState(false);
+  const [searchText, setSearchText] =
+    useState("");
 
-  const [darkTheme, setDarkTheme] = useState(false);
+  const [darkTheme, setDarkTheme] =
+    useState(false);
   const toggleTheme = () => {
     setDarkTheme(!darkTheme);
   };
@@ -23,14 +29,18 @@ const App = () => {
       >
         <ToDoListWithToolbar
           displayStatus={displayStatus}
-          setDisplayStatus={setDisplayStatus}
+          setDisplayStatus={
+            setDisplayStatus
+          }
           import={important}
           setImportant={setImportant}
           searchText={searchText}
           setSearchText={setSearchText}
         >
           <ToDoManager
-            displayStatus={displayStatus}
+            displayStatus={
+              displayStatus
+            }
             important={important}
             searchText={searchText}
             darkTheme={darkTheme}

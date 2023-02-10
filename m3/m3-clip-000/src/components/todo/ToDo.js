@@ -16,7 +16,9 @@ const ToDo = ({
     >
       <div
         onClick={() => {
-          return handleToggleCompleted(todoItem.id);
+          return handleToggleCompleted(
+            todoItem.id,
+          );
         }}
       >
         {todoItem.important ? (
@@ -48,7 +50,9 @@ const ToDo = ({
         <button
           className="btn edit"
           title="Edit"
-          onClick={() => handleEdit(todoItem)}
+          onClick={() =>
+            handleEdit(todoItem)
+          }
         >
           <i className="fas fa-pencil-alt"></i>
         </button>
@@ -57,7 +61,8 @@ const ToDo = ({
           className="btn delete"
           title="Delete"
           onClick={() => {
-            const response = window.confirm("Delete?");
+            const response =
+              window.confirm("Delete?");
             if (response) {
               handleDelete(todoItem.id);
             }

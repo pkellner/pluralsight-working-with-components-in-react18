@@ -6,7 +6,11 @@ const ToDoEditForm = ({
   setAddOrEdit,
 }) => {
   return (
-    <div className={visible ? "showing" : "hidden"}>
+    <div
+      className={
+        visible ? "showing" : "hidden"
+      }
+    >
       <div className="input-group">
         <div className="form-floating">
           <input
@@ -15,7 +19,8 @@ const ToDoEditForm = ({
             onChange={(e) => {
               setTodoRecord({
                 ...todoRecord,
-                todoText: e.target.value,
+                todoText:
+                  e.target.value,
               });
             }}
             placeholder="Enter To-do..."
@@ -49,12 +54,15 @@ const ToDoEditForm = ({
           <input
             className="form-check-input"
             type="checkbox"
-            checked={todoRecord.important}
+            checked={
+              todoRecord.important
+            }
             id="importantCheckbox"
             onChange={() => {
               setTodoRecord({
                 ...todoRecord,
-                important: !todoRecord.important,
+                important:
+                  !todoRecord.important,
               });
             }}
           />
@@ -69,12 +77,15 @@ const ToDoEditForm = ({
           <input
             className="form-check-input"
             type="checkbox"
-            checked={todoRecord.completed}
+            checked={
+              todoRecord.completed
+            }
             id="completedCheckbox"
             onChange={() => {
               setTodoRecord({
                 ...todoRecord,
-                completed: !todoRecord.completed,
+                completed:
+                  !todoRecord.completed,
               });
             }}
           />

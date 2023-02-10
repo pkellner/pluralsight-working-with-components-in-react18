@@ -2,8 +2,13 @@ import useGeneralizedCrudMethods from "./useGeneralizedCrudMethods";
 
 const useTodosData = () => {
   const url = "/api/todo";
-  const errorNotificationFn = (error) => {
-    console.log("Error From useTodosData", error);
+  const errorNotificationFn = (
+    error,
+  ) => {
+    console.log(
+      "Error From useTodosData",
+      error,
+    );
   };
 
   const {
@@ -14,17 +19,29 @@ const useTodosData = () => {
     updateRecord,
     deleteRecord,
     reFetch,
-  } = useGeneralizedCrudMethods(url, errorNotificationFn);
+  } = useGeneralizedCrudMethods(
+    url,
+    errorNotificationFn,
+  );
 
-  function createTodo(rec, callbackDone) {
+  function createTodo(
+    rec,
+    callbackDone,
+  ) {
     createRecord(rec, callbackDone);
   }
 
-  function updateTodo(rec, callbackDone) {
+  function updateTodo(
+    rec,
+    callbackDone,
+  ) {
     updateRecord(rec, callbackDone);
   }
 
-  function deleteTodo(id, callbackDone) {
+  function deleteTodo(
+    id,
+    callbackDone,
+  ) {
     deleteRecord(id, callbackDone);
   }
 

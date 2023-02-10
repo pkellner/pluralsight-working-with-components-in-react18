@@ -21,7 +21,7 @@ This GitHub repo includes the final code for all the modules in the course
 Creating UIs in React is all about creating independent components that seamlessly work together to present a consistent view across your React web app. In this course, Working with React Components, you will gain the ability to architect and build high quality react apps. First, you will learn how the design principle separation of concerns applies to building React components. Next, you will discover the various primitive methods for sharing data and methods between components as well as sharing data more globally with the Context API. Finally, you will explore how you can improve your Apps performance taking advantage of Concurrent Rendering. When you are finished with this course, you will have the skills and knowledge of React component design needed to leverage re-usability and ensure consistency in your apps and code with less bugs.
 
 ## Getting Started
-1. **Install [Node 16 (latest-verson) with NPM 17](https://nodejs.org)**.
+1. **Install [nodejs.org](https://nodejs.org)**.
 2. **Clone this repository.** - `https://github.com/pkellner/pluralsight-working-with-components-in-react18` or [download the zip](https://github.com/pkellner/pluralsight-working-with-components-in-react18/archive/master.zip)
 3. **Set your default directory to which module you want (example: `cd m4` - `cd m4-clip-040`
 4. **Install Node Packages with Dependencies.** - `npm install`

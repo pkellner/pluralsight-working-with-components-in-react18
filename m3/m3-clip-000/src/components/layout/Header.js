@@ -1,6 +1,9 @@
 import React from "react";
 
-const Header = ({ darkTheme, toggleTheme }) => {
+const Header = ({
+  darkTheme,
+  toggleTheme,
+}) => {
   return (
     <header>
       <h2>To-do List</h2>
