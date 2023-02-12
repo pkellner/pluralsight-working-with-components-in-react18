@@ -17,9 +17,7 @@ const ToDoFilterToolbar = ({
               <input
                 value={searchText}
                 onChange={(event) => {
-                  setSearchText(
-                    event.target.value,
-                  );
+                  setSearchText(event.target.value);
                 }}
                 type="text"
                 className="form-search-text"
@@ -29,16 +27,11 @@ const ToDoFilterToolbar = ({
             <li className="nav-item">
               <a
                 className={
-                  displayStatus ===
-                  "all"
+                  displayStatus === "all"
                     ? "nav-link active"
                     : "nav-link"
                 }
-                onClick={() =>
-                  setDisplayStatus(
-                    "all",
-                  )
-                }
+                onClick={() => setDisplayStatus("all")}
                 href="#"
               >
                 All
@@ -47,16 +40,11 @@ const ToDoFilterToolbar = ({
             <li className="nav-item">
               <a
                 className={
-                  displayStatus ===
-                  "pending"
+                  displayStatus === "pending"
                     ? "nav-link active"
                     : "nav-link"
                 }
-                onClick={() =>
-                  setDisplayStatus(
-                    "pending",
-                  )
-                }
+                onClick={() => setDisplayStatus("pending")}
                 href="#"
               >
                 Pending
@@ -65,16 +53,11 @@ const ToDoFilterToolbar = ({
             <li className="nav-item">
               <a
                 className={
-                  displayStatus ===
-                  "completed"
+                  displayStatus === "completed"
                     ? "nav-link active"
                     : "nav-link"
                 }
-                onClick={() =>
-                  setDisplayStatus(
-                    "completed",
-                  )
-                }
+                onClick={() => setDisplayStatus("completed")}
                 href="#"
               >
                 Completed

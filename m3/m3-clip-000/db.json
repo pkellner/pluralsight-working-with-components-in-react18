@@ -1,28 +1,16 @@
 {
   "todos": [
     {
-      "id": 1,
-      "todoText": "Give dog a bath",
-      "completed": true,
-      "important": false
-    },
-    {
-      "id": 2,
-      "todoText": "Do laundry",
-      "completed": true,
-      "important": false
+      "todoText": "Clean car",
+      "completed": false,
+      "important": false,
+      "id": 11
     },
     {
       "id": 3,
       "todoText": "Wash clothes",
-      "completed": false,
-      "important": false
-    },
-    {
-      "id": 4,
-      "todoText": "Vacuum living room",
       "completed": true,
-      "important": true
+      "important": false
     },
     {
       "id": 5,
@@ -31,22 +19,10 @@
       "important": true
     },
     {
-      "id": 6,
-      "todoText": "Buy light for desk",
-      "completed": true,
-      "important": true
-    },
-    {
       "id": 7,
-      "todoText": "Wash dishes",
+      "todoText": "Wash dishes fast",
       "completed": false,
       "important": false
-    },
-    {
-      "id": 8,
-      "todoText": "Hang laundry",
-      "completed": false,
-      "important": true
     },
     {
       "id": 9,

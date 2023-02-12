@@ -1,7 +1,4 @@
-import {
-  useContext,
-  useState,
-} from "react";
+import { useContext, useState } from "react";
 import { ToDosDataContext } from "../../contexts/ToDosDataContext";
 import ToDoEditForm from "./ToDoEditForm";
 import ToDoList from "./ToDoList";
@@ -13,30 +10,19 @@ const ToDoManager = ({
   searchText,
   darkTheme,
 }) => {
-  const {
-    todoList,
-    updateTodo,
-    createTodo,
-    deleteTodo,
-  } = useContext(ToDosDataContext);
+  const { todoList, updateTodo, createTodo, deleteTodo } =
+    useContext(ToDosDataContext);
 
-  const [todoRecord, setTodoRecord] =
-    useState({
-      todoText: "",
-      completed: false,
-      important: false,
-    });
-  const [idUpdating, setIdUpdating] =
-    useState(0);
-
-  // "add" or "edit"
-  const [addOrEdit, setAddOrEdit] =
-    useState("add");
+  const [todoRecord, setTodoRecord] = useState({
+    todoText: "",
+    completed: false,
+    important: false,
+  });
+  const [idUpdating, setIdUpdating] = useState(0);
+  const [addOrEdit, setAddOrEdit] = useState("add"); // "add" or "edit"
 
   const handleToggle = (id) => {
-    const rec = todoList.find(
-      (rec) => rec.id === id,
-    );
+    const rec = todoList.find((rec) => rec.id === id);
     const recUpdated = {
       ...rec,
       completed: !rec.completed,
@@ -73,41 +59,23 @@ const ToDoManager = ({
   };
 
   if (!todoList) {
-    return (
-      <div className="loading-state-canvas">
-        Loading...
-      </div>
-    );
+    return <div className="loading-state-canvas">Loading...</div>;
   }
 
   return (
     <>
       <div className="form">
-        <ToDoAddForm
-          visible={addOrEdit === "add"}
-          add={add}
-          darkTheme={darkTheme}
-        />
-
+        <ToDoAddForm visible={addOrEdit === "add"} add={add} darkTheme={darkTheme}/>
         <ToDoEditForm
-          visible={addOrEdit === "edit"}
-          update={handleUpdate}
-          todoRecord={todoRecord}
-          setTodoRecord={setTodoRecord}
-          setAddOrEdit={setAddOrEdit}
+          visible={addOrEdit === "edit"} update={handleUpdate} todoRecord={todoRecord}
+          setTodoRecord={setTodoRecord} setAddOrEdit={setAddOrEdit}
         />
       </div>
 
       <ToDoList
-        displayStatus={displayStatus}
-        important={important}
-        searchText={searchText}
-        toDoList={todoList}
-        handleToggle={handleToggle}
-        handleDelete={handleDelete}
-        handleEdit={handleEdit}
-        idUpdating={idUpdating}
-        darkTheme={darkTheme}
+        displayStatus={displayStatus} important={important} searchText={searchText}
+        toDoList={todoList} handleToggle={handleToggle} handleDelete={handleDelete}
+        handleEdit={handleEdit} idUpdating={idUpdating} darkTheme={darkTheme}
       />
     </>
   );

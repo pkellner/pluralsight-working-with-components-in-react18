@@ -9,16 +9,12 @@ const ToDo = ({
     <div
       key={todoItem.id}
       className={
-        todoItem.completed
-          ? "single-task completed"
-          : "single-task"
+        todoItem.completed ? "single-task completed" : "single-task"
       }
     >
       <div
         onClick={() => {
-          return handleToggleCompleted(
-            todoItem.id,
-          );
+          return handleToggleCompleted(todoItem.id);
         }}
       >
         {todoItem.important ? (
@@ -40,9 +36,7 @@ const ToDo = ({
             role="status"
             aria-hidden="true"
           ></span>
-          <span className="visually-hidden">
-            Loading...
-          </span>
+          <span className="visually-hidden">Loading...</span>
         </button>
       ) : null}
 
@@ -50,9 +44,7 @@ const ToDo = ({
         <button
           className="btn edit"
           title="Edit"
-          onClick={() =>
-            handleEdit(todoItem)
-          }
+          onClick={() => handleEdit(todoItem)}
         >
           <i className="fas fa-pencil-alt"></i>
         </button>
@@ -61,8 +53,7 @@ const ToDo = ({
           className="btn delete"
           title="Delete"
           onClick={() => {
-            const response =
-              window.confirm("Delete?");
+            const response = window.confirm("Delete?");
             if (response) {
               handleDelete(todoItem.id);
             }

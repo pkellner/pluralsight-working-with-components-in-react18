@@ -16,28 +16,17 @@ const ToDoList = ({
         .filter((todo) => {
           if (displayStatus === "all") {
             return true;
-          } else if (
-            displayStatus === "pending"
-          ) {
-            return (
-              todo.completed === false
-            );
-          } else if (
-            displayStatus ===
-            "completed"
-          ) {
-            return (
-              todo.completed === true
-            );
+          } else if (displayStatus === "pending") {
+            return todo.completed === false;
+          } else if (displayStatus === "completed") {
+            return todo.completed === true;
           } else {
             return false; // should not be needed
           }
         })
         .filter((todo) => {
           if (important === true) {
-            return (
-              todo.important === true
-            );
+            return todo.important === true;
           } else {
             return true;
           }
@@ -46,9 +35,7 @@ const ToDoList = ({
           if (searchText?.length > 0) {
             return todo.todoText
               .toLocaleLowerCase()
-              .includes(
-                searchText.toLocaleLowerCase(),
-              );
+              .includes(searchText.toLocaleLowerCase());
           } else {
             return true;
           }
@@ -58,12 +45,8 @@ const ToDoList = ({
             <ToDo
               key={todo.id}
               todoItem={todo}
-              handleToggleCompleted={
-                handleToggle
-              }
-              handleDelete={
-                handleDelete
-              }
+              handleToggleCompleted={handleToggle}
+              handleDelete={handleDelete}
               handleEdit={handleEdit}
               idUpdating={idUpdating}
             />
