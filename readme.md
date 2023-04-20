@@ -5,7 +5,7 @@
 
 | **Course**                                                                           | Release Date  |
 |-------------------------------------------------------------------------------------------------------------------------------|---------------|
-| **[Working with Components in React 18](https://pluralsight.com/profile/author/peter-kellner)**   *(this course)*             | Coming 2023      |
+| **[Working with Components in React 18](https://pluralsight.com/profile/author/peter-kellner)**   *(this course)*             | February 2023 |
 | **[Using Hooks in React 18](https://pluralsight.com/courses/react-18-using-hooks/)**                                          | November 2022 |
 | **[What is React](https://pluralsight.com/courses/react-what-is/)**                                                           | August 2022   |
 | **[What's New in React 18](https://pluralsight.com/courses/react-18-whats-new/)**                                             | May 2022      |
