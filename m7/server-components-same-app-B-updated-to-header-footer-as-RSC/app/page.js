@@ -1,3 +1,4 @@
+import "server-only";
 import App from "@/app/components/App";
 import React, { Suspense } from "react";
 import Header from "@/app/components/layout/Header";

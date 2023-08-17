@@ -1,3 +1,5 @@
+'use client'
+
 import ToDoItemText from "./ToDoItemText";
 
 export default function ToDo({ todoItem }) {

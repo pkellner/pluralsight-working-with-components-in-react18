@@ -1,4 +1,4 @@
-
+"use client";
 
 export default function ToDoItemText({ important, todoText }) {
   return (
@@ -12,4 +12,3 @@ export default function ToDoItemText({ important, todoText }) {
     </>
   );
 }
-
