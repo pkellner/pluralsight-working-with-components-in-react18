@@ -1,15 +1,16 @@
 # Course Code for [Working with Components in React 18](http://www.pluralsight.com/courses/react-18-working-components) on Pluralsight
 
 
-## OTHER Recently Released Courses From Peter Kellner
+## OTHER **Recently Released** Courses From Peter Kellner
 
-| **Course**                                                                           | Release Date  |
-|-------------------------------------------------------------------------------------------------------------------------------|---------------|
-| **[Working with Components in React 18](https://pluralsight.com/profile/author/peter-kellner)**   *(this course)*             | February 2023 |
-| **[Using Hooks in React 18](https://pluralsight.com/courses/react-18-using-hooks/)**                                          | November 2022 |
-| **[What is React](https://pluralsight.com/courses/react-what-is/)**                                                           | August 2022   |
-| **[What's New in React 18](https://pluralsight.com/courses/react-18-whats-new/)**                                             | May 2022      |
-| **[Data and UI Patterns in React](https://github.com/pkellner/pluralsight-building-essential-ui-data-elements-in-react/)**    | December 2021 |
+| **Course**                                                                                                                 | Release Date  |
+|----------------------------------------------------------------------------------------------------------------------------|---------------|
+| **[Server Component Fundamentals](https://pluralsight.com/courses/react-18-server-component-fundamentals/)**        | July 2023        |
+| **[Working with Components in React 18](https://pluralsight.com/courses/react-18-working-components/)**   *(this course)*  | February 2023 |
+| **[Using Hooks in React 18](https://pluralsight.com/courses/react-18-using-hooks/)**                                       | November 2022 |
+| **[What is React](https://pluralsight.com/courses/react-what-is/)**                                                        | August 2022   |
+| **[What's New in React 18](https://pluralsight.com/courses/react-18-whats-new/)**                                          | May 2022      |
+| **[Data and UI Patterns in React](https://github.com/pkellner/pluralsight-building-essential-ui-data-elements-in-react/)** | December 2021 |
 
 <hr/>
 
