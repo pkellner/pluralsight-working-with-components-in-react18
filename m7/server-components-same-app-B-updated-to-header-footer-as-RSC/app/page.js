@@ -1,34 +1,14 @@
-'use client';
-import { useTransition, useState } from "react";
-import ToDoListWithToolbar from "./components/todo/ToDoListWithToolbar";
-import { TodosDataProvider } from "./contexts/ToDosDataContext";
-import ToDoManager from "./components/todo/ToDoManager";
-import Layout from "./components/layout/Layout";
+import App from "@/app/components/App";
+import React, { Suspense } from "react";
+import Header from "@/app/components/layout/Header";
+import Footer from "@/app/components/layout/Footer";
 
-const App = () => {
-  const [displayStatus, setDisplayStatus] = useState("all"); // all, pending, completed
-  const [important, setImportant] = useState(false);
-  const [searchText, setSearchText] = useState("");
-
-  const [isPending, startTransition] = useTransition();
-
+export default function Page() {
   return (
-    <TodosDataProvider>
-      <Layout>
-        <ToDoListWithToolbar
-          displayStatus={displayStatus} setDisplayStatus={setDisplayStatus}
-          important={important} setImportant={setImportant}
-          searchText={searchText}
-          setSearchText={setSearchText}
-          startTransition={startTransition} isPending={isPending}
-        >
-          <ToDoManager
-            displayStatus={displayStatus} important={important}
-            searchText={searchText}
-          />
-        </ToDoListWithToolbar>
-      </Layout>
-    </TodosDataProvider>
+    <Suspense fallback={<div>Loading... (from App.js RSC)</div>}>
+      <Header />
+      <App />
+      <Footer />
+    </Suspense>
   );
-};
-export default App;
+}

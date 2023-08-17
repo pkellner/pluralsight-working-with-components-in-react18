@@ -1,16 +1,14 @@
-import React, {useState} from "react";
+"use client";
 
-const ToDoFilterToolbar = ({
-  displayStatus,
-  setDisplayStatus,
-  important,
-  setImportant,
-  searchText,
-  setSearchText,
-  startTransition,
-  isPending
-}) => {
-  const [searchTextResponsive, setSearchTextResponsive] = useState("");
+
+import {useImportantContext} from "@/app/contexts/ImportantContext";
+
+export default function ToDoFilterToolbar() {
+
+  const {important, setImportant} = useImportantContext();
+
+  const displayStatus = "all";
+
   return (
     <nav className="navbar navbar-expand">
       <div className="container-fluid">
@@ -18,28 +16,16 @@ const ToDoFilterToolbar = ({
           <div className="filters">
             <li className="nav-item">
               <input
-                value={searchTextResponsive}
-                onChange={(event) => {
-                  setSearchTextResponsive(event.target.value);
-                  startTransition(() => setSearchText(event.target.value));
-                }}
                 type="text"
                 className="form-search-text"
                 placeholder="Search"
               />
             </li>
             <li className="nav-item">
-              <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"
-                style={{
-                  visibility: isPending ? "visible" : "hidden",
-                }}></span>
-            </li>
-            <li className="nav-item">
               <a
                 className={
                   displayStatus === "all" ? "nav-link active" : "nav-link"
                 }
-                onClick={() => setDisplayStatus("all")}
                 href="#"
               >
                 All
@@ -50,7 +36,6 @@ const ToDoFilterToolbar = ({
                 className={
                   displayStatus === "pending" ? "nav-link active" : "nav-link"
                 }
-                onClick={() => setDisplayStatus("pending")}
                 href="#"
               >
                 Pending
@@ -61,7 +46,6 @@ const ToDoFilterToolbar = ({
                 className={
                   displayStatus === "completed" ? "nav-link active" : "nav-link"
                 }
-                onClick={() => setDisplayStatus("completed")}
                 href="#"
               >
                 Completed
@@ -74,10 +58,6 @@ const ToDoFilterToolbar = ({
               type="checkbox"
               id="important-checkbox-toggle-id"
               checked={important}
-              // THIS FAILS, MAYBE BECAUSE NEED TO INSURE THIS CHANGE HAPPENS AFTER COMPONENT COMPLETELY RENDERS
-              // onChange={() => {
-              //   setImportant(!important);
-              // }}
               onChange={() => {
                 setImportant((prev) => {
                   return !prev;
@@ -95,5 +75,5 @@ const ToDoFilterToolbar = ({
       </div>
     </nav>
   );
-};
-export default ToDoFilterToolbar;
+}
+

@@ -1,3 +1,4 @@
+'use client';
 import { withTheme } from "../hocs/withTheme";
 
 const Header = ({ layoutVersion, darkTheme, toggleTheme }) => {

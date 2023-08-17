@@ -1,3 +1,4 @@
+'use client';
 import { useContext, useState } from "react";
 import { ToDosDataContext } from "../../contexts/ToDosDataContext";
 import ToDoEditForm from "./ToDoEditForm";

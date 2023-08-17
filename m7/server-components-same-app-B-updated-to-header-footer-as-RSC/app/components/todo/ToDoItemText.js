@@ -1,6 +1,6 @@
-import { memo } from "react";
 
-function ToDoItemText({ important, todoText }) {
+
+export default function ToDoItemText({ important, todoText }) {
   return (
     <>
       {important ? (
@@ -13,4 +13,3 @@ function ToDoItemText({ important, todoText }) {
   );
 }
 
-export default memo(ToDoItemText);
