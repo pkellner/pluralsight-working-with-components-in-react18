@@ -1,7 +1,7 @@
 import "server-only";
 
 import ToDoItem from "@/app/components/todo/ToDoItem";
-import ToDoItemWrapper from "@/app/components/todo/ToDoItemWrapper";
+import ToDoItemClient from "@/app/components/todo/ToDoItemClient";
 
 export default function ToDoList({ toDoList }) {
   return (
@@ -9,9 +9,9 @@ export default function ToDoList({ toDoList }) {
       {toDoList
         .map((toDo) => {
           return (
-            <ToDoItemWrapper toDo={toDo} key={toDo.id}>
+            <ToDoItemClient toDo={toDo} key={toDo.id}>
               <ToDoItem toDo={toDo} />
-            </ToDoItemWrapper>
+            </ToDoItemClient>
           );
         })}
     </div>
