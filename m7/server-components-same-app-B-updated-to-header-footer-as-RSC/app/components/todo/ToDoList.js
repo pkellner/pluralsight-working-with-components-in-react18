@@ -1,5 +1,4 @@
 "use client";
-import ToDo from "./ToDo";
 import { useImportantContext } from "@/app/contexts/ImportantContext";
 
 export default function ToDoList({ toDoList }) {
@@ -11,7 +10,18 @@ export default function ToDoList({ toDoList }) {
           return important ? todo.important : true;
         })
         .map((todo) => {
-          return <ToDo key={todo.id} todoItem={todo} />;
+          return (
+            <div className="single-task">
+              <div>
+                {todo.important ? (
+                  <span className="badge warning-bg">
+                    <i className="fa fa-exclamation-circle"></i>
+                  </span>
+                ) : null}
+                {todo.todoText.slice(0, 60)}
+              </div>
+            </div>
+          );
         })}
     </div>
   );
