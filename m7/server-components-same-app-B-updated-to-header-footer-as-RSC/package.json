@@ -1,7 +1,7 @@
 {
-  "name": "my-app",
+  "name": "Minimal React Server Component App",
+    "description": "Minimal React Server Component App For Pluralsight Course",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",

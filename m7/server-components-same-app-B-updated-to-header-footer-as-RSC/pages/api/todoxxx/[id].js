@@ -52,7 +52,7 @@ export default async function userHandler(req, res) {
         res.status(200).json(recordFromBody);
         console.log(`PUT /api/todo/${id} status: 200`);
       } catch (e) {
-        console.log("/api/todo PUT error:", e);
+        console.log("/api/todoxxx PUT error:", e);
       }
       break;
 
@@ -79,7 +79,7 @@ export default async function userHandler(req, res) {
         res.status(200).json(recordFromBody);
         console.log(`POST /api/todo/${id} status: 200`);
       } catch (e) {
-        console.log("/api/todo POST error:", e);
+        console.log("/api/todoxxx POST error:", e);
       }
       break;
 
@@ -87,7 +87,7 @@ export default async function userHandler(req, res) {
       try {
         await delay(delayTime);
         const todos = await getTodosData();
-        // allows for multiple id's to be delete using non-standard REST /api/todo/10,12,14 for 3 records
+        // allows for multiple id's to be delete using non-standard REST /api/todoxxx/10,12,14 for 3 records
         const newRecsArray = todos.filter(function (rec) {
           return !ids.includes(rec.id);
         });
@@ -104,7 +104,7 @@ export default async function userHandler(req, res) {
         res.status(200).json(recordFromBody);
         console.log(`DELETE /api/todo/${ids.toString()} status: 200`);
       } catch (e) {
-        console.log("/api/todo DELETE error:", e);
+        console.log("/api/todoxxx DELETE error:", e);
       }
       break;
 

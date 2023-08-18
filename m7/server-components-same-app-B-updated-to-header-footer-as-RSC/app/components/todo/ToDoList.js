@@ -3,7 +3,7 @@ import ToDo from "./ToDo";
 import { useImportantContext } from "@/app/contexts/ImportantContext";
 
 export default function ToDoList({ toDoList }) {
-  const {important} = useImportantContext();
+  const { important } = useImportantContext();
   return (
     <div className="tasks">
       {toDoList

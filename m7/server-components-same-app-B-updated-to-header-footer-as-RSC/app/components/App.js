@@ -10,7 +10,7 @@ export default async function App() {
   return (
     <ImportantContextProvider>
       <TodoListWithToolbar>
-        <ToDoList toDoList={results.data} />
+        <ToDoList toDoList={results.data.todos} />
       </TodoListWithToolbar>
     </ImportantContextProvider>
   );

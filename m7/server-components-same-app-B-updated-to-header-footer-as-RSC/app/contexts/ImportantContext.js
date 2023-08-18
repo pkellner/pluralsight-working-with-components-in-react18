@@ -14,7 +14,6 @@ export default function ImportantContextProvider({ children }) {
 
 export const useImportantContext = () => {
   const value = useContext(ImportantContext);
-  debugger;
   if (!value) {
     throw new Error(
       "useImportantContext must be used within a ImportantContextProvider"

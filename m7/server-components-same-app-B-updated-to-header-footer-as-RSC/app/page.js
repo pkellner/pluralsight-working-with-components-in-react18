@@ -6,10 +6,12 @@ import Footer from "@/app/components/layout/Footer";
 
 export default function Page() {
   return (
-    <Suspense fallback={<div>Loading... (from App.js RSC)</div>}>
+    <>
       <Header />
-      <App />
+      <Suspense fallback={<div>Loading... (from App.js in React Server Component)</div>}>
+        <App />
+      </Suspense>
       <Footer />
-    </Suspense>
+    </>
   );
 }
