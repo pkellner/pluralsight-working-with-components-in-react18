@@ -1,26 +1,17 @@
-"use client";
-import { useImportantContext } from "@/app/contexts/ImportantContext";
+import "server-only";
+
+import ToDoItem from "@/app/components/todo/ToDoItem";
+import ToDoItemWrapper from "@/app/components/todo/ToDoItemWrapper";
 
 export default function ToDoList({ toDoList }) {
-  const { important } = useImportantContext();
   return (
     <div className="tasks">
       {toDoList
-        .filter((todo) => {
-          return important ? todo.important : true;
-        })
-        .map((todo) => {
+        .map((toDo) => {
           return (
-            <div className="single-task">
-              <div>
-                {todo.important ? (
-                  <span className="badge warning-bg">
-                    <i className="fa fa-exclamation-circle"></i>
-                  </span>
-                ) : null}
-                {todo.todoText.slice(0, 60)}
-              </div>
-            </div>
+            <ToDoItemWrapper toDo={toDo} key={toDo.id}>
+              <ToDoItem toDo={toDo} />
+            </ToDoItemWrapper>
           );
         })}
     </div>
