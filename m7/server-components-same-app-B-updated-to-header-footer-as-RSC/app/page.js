@@ -1,16 +1,21 @@
 import "server-only";
 import React, { Suspense } from "react";
-import App from "@/app/components/App";
-import Header from "@/app/components/layout/Header";
-import Footer from "@/app/components/layout/Footer";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout//Footer";
+import ImportantContextProvider from "./contexts/ImportantContext";
+import ToDoFilterToolbar from "./components/todo/ToDoFilterToolbar";
+import ToDoList from "./components/todo/ToDoList";
 
 export default function Page() {
   return (
     <>
       <Header />
-      <Suspense fallback={<div>Loading... (from Page.js, a React Server Component)</div>}>
-        <App />
-      </Suspense>
+      <ImportantContextProvider>
+        <ToDoFilterToolbar />
+        <Suspense fallback={<div>Loading... </div>}>
+          <ToDoList />
+        </Suspense>
+      </ImportantContextProvider>
       <Footer />
     </>
   );
