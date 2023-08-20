@@ -15,13 +15,13 @@
     "id": 6,
     "todoText": "Buy light for desk",
     "completed": false,
-    "important": true
+    "important": false
   },
   {
     "id": 7,
     "todoText": "Wash dishes",
     "completed": false,
-    "important": false
+    "important": true
   },
   {
     "id": 9,

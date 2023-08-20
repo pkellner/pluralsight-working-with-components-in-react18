@@ -8,9 +8,8 @@ export default function ToggleImportantButton({ toDo }) {
       const updatedImportant = !toDo.important;
       const updatedTodo = { ...toDo, important: updatedImportant };
 
-      // Send the updated todo to the server
-      const url = `http://localhost:4000/todos/${toDo.id}`
-      //const url = "http://localhost:3000/api/todo"
+      // Send the updated todos to the server
+      const url = `http://localhost:3000/api/todos/${toDo.id}`
       const response = await fetch(url, {
         method: "PUT",
         headers: {

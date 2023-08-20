@@ -6,8 +6,8 @@ import ToDoItemClient from "../../components/todo/ToDoItemClient";
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default async function ToDoList() {
-  const url = "http://localhost:4000/todos";
-  //const url = "http://localhost:3000/api/todo"
+  //const url = "http://localhost:4000/todos";
+  const url = "http://localhost:3000/api/todos"
   const res = await fetch(url,{
     next: {
       revalidate: 0,
