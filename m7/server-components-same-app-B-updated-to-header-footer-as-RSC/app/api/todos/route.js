@@ -15,7 +15,6 @@ export async function GET() {
   });
 }
 
-
 // this works if you don't put the id at the end of the URL, otherwise, see /api/todos/[id]/route.js for PUT function
 export async function PUT(request) {
   const filePath = path.resolve("./app/api/todos", "todos.json");
