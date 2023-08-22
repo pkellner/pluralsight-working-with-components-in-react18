@@ -17,7 +17,10 @@ function App() {
   const [searchHighPriority, setSearchHighPriority] = useState("");
   const [isPending, startTransition] = useTransition();
   const [todoList, setTodoList] = useState([
-    "clean dog", "eat lunch", "wash clothes", "...",
+    "clean dog",
+    "eat lunch",
+    "wash clothes",
+    "...",
   ]);
 
   return (

@@ -15,14 +15,18 @@ const App = () => {
     <TodosDataProvider>
       <Layout>
         <ToDoListWithToolbar
-          displayStatus={displayStatus} setDisplayStatus={setDisplayStatus}
-          important={important} setImportant={setImportant}
+          displayStatus={displayStatus}
+          setDisplayStatus={setDisplayStatus}
+          important={important}
+          setImportant={setImportant}
           searchText={searchText}
           setSearchText={setSearchText}
-          startTransition={startTransition} isPending={isPending}
+          startTransition={startTransition}
+          isPending={isPending}
         >
           <ToDoManager
-            displayStatus={displayStatus} important={important}
+            displayStatus={displayStatus}
+            important={important}
             searchText={searchText}
           />
         </ToDoListWithToolbar>

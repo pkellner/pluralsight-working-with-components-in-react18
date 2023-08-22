@@ -3,9 +3,11 @@ import { useState, useDeferredValue } from "react";
 function ShowTodoList({ list, search }) {
   return (
     <div>
-      {list.filter(rec => rec.includes(search)).map((rec) => (
-        <div key={rec}>{rec}</div>
-      ))}
+      {list
+        .filter((rec) => rec.includes(search))
+        .map((rec) => (
+          <div key={rec}>{rec}</div>
+        ))}
     </div>
   );
 }
@@ -19,7 +21,7 @@ function App() {
     "eat lunch",
     "wash clothes",
     "...",
-  ]); 
+  ]);
 
   return (
     <div>

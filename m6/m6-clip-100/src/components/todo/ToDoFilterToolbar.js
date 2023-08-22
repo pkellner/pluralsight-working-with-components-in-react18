@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const ToDoFilterToolbar = ({
   displayStatus,
@@ -8,7 +8,7 @@ const ToDoFilterToolbar = ({
   searchText,
   setSearchText,
   startTransition,
-  isPending
+  isPending,
 }) => {
   const [searchTextResponsive, setSearchTextResponsive] = useState("");
   return (
@@ -29,10 +29,14 @@ const ToDoFilterToolbar = ({
               />
             </li>
             <li className="nav-item">
-              <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"
+              <span
+                className="spinner-border spinner-border-sm"
+                role="status"
+                aria-hidden="true"
                 style={{
                   visibility: isPending ? "visible" : "hidden",
-                }}></span>
+                }}
+              ></span>
             </li>
             <li className="nav-item">
               <a
