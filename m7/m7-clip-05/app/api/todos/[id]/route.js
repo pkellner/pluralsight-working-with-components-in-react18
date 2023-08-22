@@ -1,11 +1,11 @@
-import { NextResponse } from "next/server";
-import { promises as fs } from "fs";
-import path from "path";
+import { NextResponse } from 'next/server';
+import { promises as fs } from 'fs';
+import path from 'path';
 
 export async function GET(request) {
-  const id = request.url.split("/").pop();
+  const id = request.url.split('/').pop();
 
-  const filePath = path.resolve("./app/api/todos", "todos.json");
+  const filePath = path.resolve('./app/api/todos', 'todos.json');
   const fileContents = await fs.readFile(filePath);
   let todos = JSON.parse(fileContents);
 
@@ -14,7 +14,7 @@ export async function GET(request) {
   return new NextResponse(JSON.stringify(foundRecs, null, 2), {
     status: 200,
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
   });
 }
@@ -22,7 +22,7 @@ export async function GET(request) {
 export async function PUT(request) {
   const toDoItem = await request.json();
 
-  const filePath = path.resolve("./app/api/todos", "todos.json");
+  const filePath = path.resolve('./app/api/todos', 'todos.json');
   const fileContents = await fs.readFile(filePath);
   let todos = JSON.parse(fileContents);
 

@@ -1,5 +1,5 @@
-import "server-only";
-import ToggleImportantButton from "../../components/todo/ToggleImportantButton";
+import 'server-only';
+import ToggleImportantButton from '../../components/todo/ToggleImportantButton';
 
 export default function ToDoItem({ toDo }) {
   return (
