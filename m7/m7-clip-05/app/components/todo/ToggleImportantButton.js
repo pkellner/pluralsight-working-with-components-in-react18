@@ -19,27 +19,18 @@ export default function ToggleImportantButton({ toDo }) {
       });
 
       if (!response.ok) {
-        throw new Error("Something went haywire with the network response!");
+        throw new Error("Something went wrong in fetch with the network response!");
       }
 
       router.refresh();
     } catch (error) {
-      console.error("uh oh! A glitch in the matrix:", error);
+      console.error("Something went wrong in toggle with the network response!", error);
     }
   }
 
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
-
-  // return (
-  //   <button
-  //     className="btn btn-info btn-sm"
-  //     onClick={toggleIt}
-  //   >
-  //     Toggle Important
-  //   </button>
-  // );
-
+  
   return (
     <button
       className="btn btn-info btn-sm"

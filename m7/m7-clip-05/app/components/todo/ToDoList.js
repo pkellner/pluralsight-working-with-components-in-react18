@@ -1,17 +1,12 @@
-import "server-only";
+import 'server-only';
 
-import ToDoItem from "../../components/todo/ToDoItem";
-import ToDoItemClient from "../../components/todo/ToDoItemClient";
+import ToDoItem from '../../components/todo/ToDoItem';
+import ToDoItemClient from '../../components/todo/ToDoItemClient';
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default async function ToDoList() {
-  // to build, you need to set the url below and then run
-  //const url = "http://localhost:4000/todos";
-  // json-server db.json --port 4000
-  //
-
-  const url = "http://localhost:3000/api/todos";
+  const url = 'http://localhost:3000/api/todos';
 
   const res = await fetch(url, {
     next: {
@@ -35,3 +30,8 @@ export default async function ToDoList() {
     </div>
   );
 }
+
+// to build, you need to set the url below and then run
+//const url = "http://localhost:4000/todos";
+// json-server db.json --port 4000
+//
