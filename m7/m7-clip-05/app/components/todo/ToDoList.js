@@ -8,13 +8,8 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export default async function ToDoList() {
   const url = 'http://localhost:3000/api/todos';
 
-  const res = await fetch(url, {
-    next: {
-      revalidate: 0,
-    },
-  });
+  const res = await fetch(url);
   const results = await res.json();
-  //const todoList = results.todos;
   const todoList = results;
   await sleep(1000);
 
