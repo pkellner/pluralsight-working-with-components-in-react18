@@ -3,7 +3,7 @@
     "id": 1,
     "todoText": "Give dog a bath",
     "completed": false,
-    "important": true
+    "important": false
   },
   {
     "id": 5,
@@ -27,7 +27,7 @@
     "id": 9,
     "todoText": "Do expense report",
     "completed": false,
-    "important": false
+    "important": true
   },
   {
     "id": 10,
