@@ -1,6 +1,7 @@
 'use client';
 
-import { useImportantContext } from '../../contexts/ImportantContext';
+import { useImportantContext }
+  from '../../contexts/ImportantContext';
 
 export default function ToDoFilterToolbar() {
   const { important, setImportant } = useImportantContext();
@@ -20,7 +21,10 @@ export default function ToDoFilterToolbar() {
               });
             }}
           />
-          <label className="form-check-label" htmlFor="important-checkbox-toggle-id">
+          <label
+            className="form-check-label"
+            htmlFor="important-checkbox-toggle-id"
+          >
             Important
           </label>
         </div>

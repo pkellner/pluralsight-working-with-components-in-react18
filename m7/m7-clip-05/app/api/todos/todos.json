@@ -3,7 +3,7 @@
     "id": 1,
     "todoText": "Give dog a bath",
     "completed": false,
-    "important": true
+    "important": false
   },
   {
     "id": 5,
@@ -15,13 +15,13 @@
     "id": 6,
     "todoText": "Buy light for desk",
     "completed": false,
-    "important": false
+    "important": true
   },
   {
     "id": 7,
     "todoText": "Wash dishes",
     "completed": false,
-    "important": true
+    "important": false
   },
   {
     "id": 9,
@@ -33,6 +33,6 @@
     "id": 10,
     "todoText": "Walk the dog",
     "completed": false,
-    "important": true
+    "important": false
   }
 ]

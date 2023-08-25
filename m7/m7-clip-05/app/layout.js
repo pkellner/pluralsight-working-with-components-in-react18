@@ -7,7 +7,8 @@ import '../styles/poppins/poppins.css';
 
 export const metadata = {
   title: 'Todo App',
-  description: 'Generated for Todo App in Pluralsight Course React 18 Components',
+  description:
+    'Generated for Todo App in Pluralsight Course React 18 Components',
 };
 
 export default function RootLayout({ children }) {
