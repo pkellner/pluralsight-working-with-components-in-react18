@@ -1,7 +1,6 @@
 'use client';
 
-import { useImportantContext }
-  from '../../contexts/ImportantContext';
+import { useImportantContext } from '../../contexts/ImportantContext';
 
 export default function ToDoItemClient({ toDo, children }) {
   const { important } = useImportantContext();
