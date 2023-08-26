@@ -14,8 +14,8 @@ export default async function ToDoList() {
   });
   const results = await res.json();
   const todoList = results;
-  await sleep(1000);
-  return (
+  await sleep(2000);
+  return ( 
     <div className="tasks">
       {todoList.map((toDo) => {
         return (
