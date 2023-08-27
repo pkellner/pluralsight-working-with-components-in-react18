@@ -5,7 +5,7 @@
 
 | **Course**                                                                                                                 | Release Date  |
 |----------------------------------------------------------------------------------------------------------------------------|---------------|
-| **[Server Component Fundamentals](https://pluralsight.com/courses/react-18-server-component-fundamentals/)**        | July 2023        |
+| **[Server Component Fundamentals](https://pluralsight.com/courses/react-18-server-component-fundamentals/)**               | July 2023        |
 | **[Working with Components in React 18](https://pluralsight.com/courses/react-18-working-components/)**   *(this course)*  | February 2023 |
 | **[Using Hooks in React 18](https://pluralsight.com/courses/react-18-using-hooks/)**                                       | November 2022 |
 | **[What is React](https://pluralsight.com/courses/react-what-is/)**                                                        | August 2022   |
@@ -16,6 +16,8 @@
 
 <br/>
 This GitHub repo includes the final code for all the modules in the course 
+
+### 8/26/2023 - Course patch update including new module 7 on React Server Components 
 
 ## Course Description
 
