@@ -15,14 +15,14 @@
     {
       "id": 3,
       "todoText": "Wash clothes",
-      "completed": true,
+      "completed": false,
       "important": true
     },
     {
       "id": 4,
       "todoText": "Vacuum living room",
-      "completed": true,
-      "important": true
+      "completed": false,
+      "important": false
     },
     {
       "id": 5,
