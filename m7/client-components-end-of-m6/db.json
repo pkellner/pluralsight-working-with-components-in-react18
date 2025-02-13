@@ -1,6 +1,12 @@
 {
   "todos": [
     {
+      "todoText": "sdf",
+      "completed": false,
+      "important": false,
+      "id": 11
+    },
+    {
       "id": 1,
       "todoText": "Give dog a bath",
       "completed": false,
@@ -10,12 +16,6 @@
       "id": 2,
       "todoText": "Do laundryxxx",
       "completed": false,
-      "important": true
-    },
-    {
-      "id": 3,
-      "todoText": "Wash clothes",
-      "completed": true,
       "important": true
     },
     {
@@ -34,12 +34,6 @@
       "id": 6,
       "todoText": "Buy light for desk",
       "completed": true,
-      "important": true
-    },
-    {
-      "id": 7,
-      "todoText": "Wash dishes",
-      "completed": false,
       "important": true
     },
     {

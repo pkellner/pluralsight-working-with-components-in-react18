@@ -3,7 +3,7 @@
     "id": 1,
     "todoText": "Give dog a bath",
     "completed": false,
-    "important": true
+    "important": false
   },
   {
     "id": 5,

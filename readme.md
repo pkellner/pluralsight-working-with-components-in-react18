@@ -5,10 +5,11 @@
 
 | **Course**                                                                                                                 | Release Date  |
 |----------------------------------------------------------------------------------------------------------------------------|---------------|
+| **[AI-Powered React Applications: Building Intelligent Interfaces](https://app.pluralsight.com/library/courses/ai-powered-react-applications-building-intelligent-interfaces/)**   | February 2025 |
+| **[What is React](https://pluralsight.com/courses/react-what-is/)**                                                        | January 2025   |
 | **[Server Component Fundamentals](https://pluralsight.com/courses/react-18-server-component-fundamentals/)**               | July 2023        |
 | **[Working with Components in React 18](https://pluralsight.com/courses/react-18-working-components/)**   *(this course)*  | February 2023 |
 | **[Using Hooks in React 18](https://pluralsight.com/courses/react-18-using-hooks/)**                                       | November 2022 |
-| **[What is React](https://pluralsight.com/courses/react-what-is/)**                                                        | August 2022   |
 | **[What's New in React 18](https://pluralsight.com/courses/react-18-whats-new/)**                                          | May 2022      |
 | **[Data and UI Patterns in React](https://github.com/pkellner/pluralsight-building-essential-ui-data-elements-in-react/)** | December 2021 |
 
